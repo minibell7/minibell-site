@@ -7,7 +7,7 @@ export default function Header() {
       <div className="container">
         <nav className={styles.nav}>
           <Link href="/" className={styles.logo}>
-            mimibell.com
+            minibell.com
           </Link>
           <ul className={styles.links}>
             <li><Link href="/projects">Projects</Link></li>

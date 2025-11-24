@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "mimibell.com",
+  title: "minibell.com",
   description: "Showcase of my PWAs and Blog",
 };
 
