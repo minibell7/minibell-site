@@ -11,7 +11,7 @@ export default function Header() {
           </Link>
           <ul className={styles.links}>
             <li><Link href="/projects">Projects</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
+            <li><a href="https://mini-bell7.blogspot.com" target="_blank" rel="noopener noreferrer">Blog</a></li>
           </ul>
         </nav>
       </div>
