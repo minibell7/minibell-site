@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import { projects } from '@/lib/projects';
 
 export default function Projects() {
     return (
@@ -7,21 +8,19 @@ export default function Projects() {
             <p className={styles.subtitle}>A collection of Progressive Web Apps I&apos;m working on.</p>
 
             <div className={styles.grid}>
-                <a href="https://pet-bti.com" target="_blank" rel="noopener noreferrer" className="card">
-                    <h3>Pet BTI</h3>
-                    <p>Discover your pet&apos;s personality type with this fun and interactive PWA.</p>
-                    <span className={styles.tag}>Live Demo</span>
-                </a>
-                <a href="https://rvqskvxip8o1yio3z9yw.share.dreamflow.app/" target="_blank" rel="noopener noreferrer" className="card">
-                    <h3>Dreamflow App</h3>
-                    <p>My second PWA project created with Dreamflow.</p>
-                    <span className={styles.tag}>Live Demo</span>
-                </a>
-                <a href="https://qr-menu-pwlvnxfbp-minibell7s-projects.vercel.app" target="_blank" rel="noopener noreferrer" className="card">
-                    <h3>QR Menu Maker</h3>
-                    <p>Create your own restaurant menu and share it via QR code.</p>
-                    <span className={styles.tag}>Live Demo</span>
-                </a>
+                {projects.map((project) => (
+                    <a
+                        key={project.id}
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card"
+                    >
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <span className={styles.tag}>Live Demo</span>
+                    </a>
+                ))}
             </div>
         </div>
     );

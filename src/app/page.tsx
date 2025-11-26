@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './page.module.css';
+import { getFeaturedProjects } from '@/lib/projects';
 
 export default function Home() {
   return (
@@ -23,12 +24,21 @@ export default function Home() {
 
       {/* Featured Section placeholder */}
       <section className={styles.featured}>
-        <h2>Latest Updates</h2>
+        <h2>Featured Projects</h2>
         <div className={styles.grid}>
-          <div className="card">
-            <h3>Coming Soon</h3>
-            <p>Stay tuned for my first PWA release.</p>
-          </div>
+          {getFeaturedProjects().map((project) => (
+            <a
+              key={project.id}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card"
+            >
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <span className={styles.tag}>Live Demo</span>
+            </a>
+          ))}
         </div>
       </section>
     </div>

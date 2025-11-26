@@ -1,24 +1,38 @@
 import Link from 'next/link';
-import { getSortedPostsData } from '@/lib/posts';
+import { supabase } from '@/lib/supabase';
 import styles from './page.module.css';
 
-export default function Blog() {
-    const allPostsData = getSortedPostsData();
+export const revalidate = 0; // Disable caching for now to see updates immediately
+
+async function getPosts() {
+    const { data: posts } = await supabase
+        .from('posts')
+        .select('*')
+        .eq('published', true)
+        .order('created_at', { ascending: false });
+
+    return posts || [];
+}
+
+export default async function Blog() {
+    const posts = await getPosts();
 
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Blog</h1>
-            <ul className={styles.list}>
-                {allPostsData.map(({ id, date, title, excerpt }) => (
-                    <li key={id} className={styles.listItem}>
-                        <Link href={`/blog/${id}`} className={styles.link}>
-                            <h2 className={styles.postTitle}>{title}</h2>
-                            <small className={styles.date}>{date}</small>
-                            <p className={styles.excerpt}>{excerpt}</p>
+            <div className={styles.grid}>
+                {posts.map((post) => (
+                    <article key={post.id} className={styles.card}>
+                        <Link href={`/blog/${post.slug}`}>
+                            <h2>{post.title}</h2>
+                            <div className={styles.meta}>
+                                <time>{new Date(post.created_at).toLocaleDateString()}</time>
+                            </div>
+                            <p>{post.excerpt}</p>
                         </Link>
-                    </li>
+                    </article>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
