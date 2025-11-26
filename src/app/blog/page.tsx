@@ -12,7 +12,7 @@ interface Post {
 async function getPosts() {
     try {
         const posts = await client.fetch<Post[]>(
-            `*[_type == "post"] | order(publishedAt desc) {
+            `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
         _id,
         title,
         slug,

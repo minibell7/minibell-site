@@ -12,7 +12,7 @@ export const projects: Project[] = [
         id: 'pet-bti',
         title: 'Pet BTI',
         description: 'Discover your pet\'s personality type with this fun and interactive PWA.',
-        url: 'https://pet-bti.com',
+        url: 'https://pet-bti.mini-bell.com',
         tags: ['PWA', 'Next.js', 'Interactive'],
         featured: true
     },

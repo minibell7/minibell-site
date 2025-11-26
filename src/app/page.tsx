@@ -16,9 +16,9 @@ export default function Home() {
           <Link href="/projects" className="btn">
             View Projects
           </Link>
-          <a href="https://mini-bell7.blogspot.com" target="_blank" rel="noopener noreferrer" className={styles.secondaryBtn}>
+          <Link href="/blog" className={styles.secondaryBtn}>
             Read Blog
-          </a>
+          </Link>
         </div>
       </section>
 
