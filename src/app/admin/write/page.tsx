@@ -16,7 +16,6 @@ export default function WritePage() {
         e.preventDefault();
         setMessage('Publishing...');
 
-        // Simple password protection (Hardcoded for now, can be improved later)
         if (password !== 'minibell1234') {
             setMessage('Incorrect password!');
             return;

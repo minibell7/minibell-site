@@ -11,10 +11,10 @@ export const projects: Project[] = [
     {
         id: 'pet-bti',
         title: 'Pet BTI',
-        description: "Discover your pet's personality type with this fun and interactive PWA.",
+        description: 'Discover your pet\'s personality type with this fun and interactive PWA.',
         url: 'https://pet-bti.com',
-        tags: ['PWA', 'Interactive', 'Fun'],
-        featured: true,
+        tags: ['PWA', 'Next.js', 'Interactive'],
+        featured: true
     },
     {
         id: 'dreamflow',
@@ -22,18 +22,18 @@ export const projects: Project[] = [
         description: 'My second PWA project created with Dreamflow.',
         url: 'https://rvqskvxip8o1yio3z9yw.share.dreamflow.app/',
         tags: ['PWA', 'Dreamflow'],
-        featured: true,
+        featured: true
     },
     {
         id: 'qr-menu',
         title: 'QR Menu Maker',
         description: 'Create your own restaurant menu and share it via QR code.',
-        url: 'https://qr-menu-pwlvnxfbp-minibell7s-projects.vercel.app',
+        url: 'https://qr.mini-bell.com',
         tags: ['PWA', 'Utility', 'QR Code'],
-        featured: true,
-    },
+        featured: true
+    }
 ];
 
 export function getFeaturedProjects() {
-    return projects.filter((project) => project.featured);
+    return projects.filter(project => project.featured);
 }

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import styles from './page.module.css';
 
-export const revalidate = 0; // Disable caching for now to see updates immediately
+export const revalidate = 0;
 
 async function getPosts() {
     const { data: posts } = await supabase
