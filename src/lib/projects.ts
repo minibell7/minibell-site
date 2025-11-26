@@ -25,6 +25,14 @@ export const projects: Project[] = [
         featured: true
     },
     {
+        id: 'qr-menu',
+        title: 'QR Menu Maker',
+        description: 'Create your own restaurant menu and share it via QR code.',
+        url: 'https://qrmenu.mini-bell.com',
+        tags: ['PWA', 'Utility', 'QR Code'],
+        featured: true
+    },
+    {
         id: 'qr-creator',
         title: 'QR Creator',
         description: 'Generate a QR code with a custom description for your YouTube channel or website link.',
