@@ -17,6 +17,11 @@ export default function Projects() {
                     <p>My second PWA project created with Dreamflow.</p>
                     <span className={styles.tag}>Live Demo</span>
                 </a>
+                <a href="https://qr-menu-pwlvnxfbp-minibell7s-projects.vercel.app" target="_blank" rel="noopener noreferrer" className="card">
+                    <h3>QR Menu Maker</h3>
+                    <p>Create your own restaurant menu and share it via QR code.</p>
+                    <span className={styles.tag}>Live Demo</span>
+                </a>
             </div>
         </div>
     );
