@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Section placeholder */}
+      {/* Featured Section - Updated for Vercel Trigger */}
       <section className={styles.featured}>
         <h2>Featured Projects</h2>
         <div className={styles.grid}>
