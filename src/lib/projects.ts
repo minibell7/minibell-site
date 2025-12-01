@@ -18,8 +18,8 @@ export const projects: Project[] = [
     },
     {
         id: 'dreamflow',
-        title: 'Dreamflow App',
-        description: 'My second PWA project created with Dreamflow.',
+        title: 'zombiecheck',
+        description: '당신이 잊고 있거나 사용하지 않는 정기구독을 관리해줍니다. 은행/카드연동이 없어서 개인정보가 유출되지 않습니다.',
         url: 'https://zombiecheck.mini-bell.com/',
         tags: ['PWA', 'Dreamflow'],
         featured: true
