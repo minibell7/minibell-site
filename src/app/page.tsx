@@ -1,46 +1,16 @@
-import Link from 'next/link';
 import styles from './page.module.css';
-import { getFeaturedProjects } from '@/lib/projects';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <section className={styles.hero}>
+      <main className={styles.main}>
         <h1 className={styles.title}>
-          Building the Future of <span className={styles.highlight}>PWA</span>
+          minibell.com
         </h1>
         <p className={styles.description}>
-          Welcome to my personal space where I showcase my Progressive Web Apps and share my thoughts on web development.
+          Something new is coming soon.
         </p>
-        <div className={styles.cta}>
-          <Link href="/projects" className="btn">
-            View Projects
-          </Link>
-          <Link href="/blog" className={styles.secondaryBtn}>
-            Read Blog
-          </Link>
-        </div>
-      </section>
-
-      {/* Featured Section - Updated for Vercel Trigger */}
-      <section className={styles.featured}>
-        <h2>Featured Projects</h2>
-        <div className={styles.grid}>
-          {getFeaturedProjects().map((project) => (
-            <a
-              key={project.id}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card"
-            >
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <span className={styles.tag}>Live Demo</span>
-            </a>
-          ))}
-        </div>
-      </section>
+      </main>
     </div>
   );
 }

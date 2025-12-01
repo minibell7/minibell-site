@@ -12,7 +12,7 @@ export const projects: Project[] = [
         id: 'pet-bti',
         title: 'Pet BTI',
         description: 'Discover your pet\'s personality type with this fun and interactive PWA.',
-        url: 'https://pet-bti.mini-bell.com',
+        url: 'https://pet-bti.mini-bell.com/',
         tags: ['PWA', 'Next.js', 'Interactive'],
         featured: true
     },
@@ -20,7 +20,7 @@ export const projects: Project[] = [
         id: 'dreamflow',
         title: 'Dreamflow App',
         description: 'My second PWA project created with Dreamflow.',
-        url: 'https://rvqskvxip8o1yio3z9yw.share.dreamflow.app/',
+        url: 'https://zombiecheck.mini-bell.com/',
         tags: ['PWA', 'Dreamflow'],
         featured: true
     },
