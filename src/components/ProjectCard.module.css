@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 12px;
+  background: #111;
+  transition: transform 0.2s, border-color 0.2s;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #666;
+}
+
+.title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.description {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  color: #888;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: #222;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: #ccc;
+}
