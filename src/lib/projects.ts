@@ -82,6 +82,87 @@ export const projects: Project[] = [
         category: 'utility'
     },
     {
+        id: 'd-day-calculator',
+        title: 'D-Day Calculator',
+        description: 'Calculate days remaining or passed since a special date.',
+        url: '/d-day-calculator',
+        tags: ['Tool', 'Date', 'Anniversary'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'percentage-calculator',
+        title: 'Percentage Calculator',
+        description: 'Calculate discounts, ratios, and percentage changes.',
+        url: '/percentage-calculator',
+        tags: ['Tool', 'Math', 'Calc'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'unit-converter',
+        title: 'Unit Converter',
+        description: 'Convert Length, Weight, Area, and Temperature units.',
+        url: '/unit-converter',
+        tags: ['Tool', 'Unit', 'Convert'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'pomodoro-timer',
+        title: 'Pomodoro Timer',
+        description: 'Boost productivity with 25m work / 5m break timer.',
+        url: '/pomodoro-timer',
+        tags: ['Tool', 'Focus', 'Timer'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'powerball',
+        title: 'US Powerball',
+        description: 'Generate lucky numbers for the US Powerball lottery.',
+        url: '/powerball',
+        tags: ['Lotto', 'USA', 'Powerball'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'mega-millions',
+        title: 'US Mega Millions',
+        description: 'Generate lucky numbers for the US Mega Millions lottery.',
+        url: '/mega-millions',
+        tags: ['Lotto', 'USA', 'Mega Millions'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'euromillions',
+        title: 'EuroMillions',
+        description: 'Generate lucky numbers for the EuroMillions lottery.',
+        url: '/euromillions',
+        tags: ['Lotto', 'Europe', 'EuroMillions'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'fortune-cookie',
+        title: 'Digital Fortune Cookie',
+        description: 'Crack open a cookie to reveal your daily fortune.',
+        url: '/fortune-cookie',
+        tags: ['Fun', 'Fortune', 'Daily'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'zodiac-calculator',
+        title: 'Zodiac Calculator',
+        description: 'Discover your Western and Chinese Zodiac signs.',
+        url: '/zodiac-calculator',
+        tags: ['Fun', 'Zodiac', 'Astrology'],
+        featured: true,
+        category: 'utility'
+    },
+    {
         id: 'og-generator',
         title: 'Open Graph Generator',
         description: 'Generate meta tags and preview cards for social media sharing.',

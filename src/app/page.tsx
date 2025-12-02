@@ -7,9 +7,9 @@ export default function Home() {
   const allProjects = getFeaturedProjects();
 
   // Define Categories
-  const dailyToolsIds = ['d-day-calculator', 'percentage-calculator', 'unit-converter', 'character-counter'];
-  const creatorToolsIds = ['youtube-thumbnail', 'image-converter', 'qr-creator', 'favicon-generator', 'og-generator'];
-  const funLuckIds = ['fortune-cookie', 'zodiac-calculator', 'pomodoro-timer', 'powerball', 'mega-millions', 'euromillions'];
+  const dailyToolsIds = ['percentage-calculator', 'unit-converter', 'd-day-calculator', 'character-counter'];
+  const creatorToolsIds = ['youtube-thumbnail', 'qr-creator', 'image-converter', 'favicon-generator', 'og-generator'];
+  const funLuckIds = ['pomodoro-timer', 'zodiac-calculator', 'fortune-cookie', 'powerball', 'mega-millions', 'euromillions'];
 
   const dailyTools = allProjects.filter(p => dailyToolsIds.includes(p.id));
   const creatorTools = allProjects.filter(p => creatorToolsIds.includes(p.id));
