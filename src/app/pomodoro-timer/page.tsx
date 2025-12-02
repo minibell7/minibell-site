@@ -44,6 +44,22 @@ export default function PomodoroPage() {
                     <li>Prevents mental fatigue.</li>
                     <li>Helps manage distractions.</li>
                 </ul>
+
+                <h2>FAQ</h2>
+                <div className={styles.faqList}>
+                    <div className={styles.faqItem}>
+                        <h3>Q. Why 25 minutes?</h3>
+                        <p>A. 25 minutes is considered the optimal time for sustained focus without fatigue. However, you can adjust the time if needed, though this timer follows the standard rule.</p>
+                    </div>
+                    <div className={styles.faqItem}>
+                        <h3>Q. What should I do during the break?</h3>
+                        <p>A. Step away from your screen! Stretch, grab a glass of water, or close your eyes. The goal is to rest your brain.</p>
+                    </div>
+                    <div className={styles.faqItem}>
+                        <h3>Q. Is there an alarm sound?</h3>
+                        <p>A. Currently, this is a visual timer. We recommend keeping the tab open to check your progress.</p>
+                    </div>
+                </div>
             </section>
         </div>
     );

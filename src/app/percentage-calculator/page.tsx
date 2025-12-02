@@ -38,6 +38,22 @@ export default function PercentagePage() {
                     <li><strong>Percentage Ratio:</strong> (Part / Total) × 100</li>
                     <li><strong>Percentage Change:</strong> ((New Value - Old Value) / Old Value) × 100</li>
                 </ul>
+
+                <h2>FAQ</h2>
+                <div className={styles.faqList}>
+                    <div className={styles.faqItem}>
+                        <h3>Q. How do I calculate a 20% discount?</h3>
+                        <p>A. To calculate a 20% discount, multiply the original price by 0.20. For example, 20% of $100 is $20. The final price would be $80.</p>
+                    </div>
+                    <div className={styles.faqItem}>
+                        <h3>Q. What is the formula for percentage change?</h3>
+                        <p>A. The formula is: ((New Value - Old Value) / Old Value) × 100. This tells you how much a number has grown or shrunk in percentage terms.</p>
+                    </div>
+                    <div className={styles.faqItem}>
+                        <h3>Q. Can I calculate percentage increase and decrease?</h3>
+                        <p>A. Yes, use the "Percentage Change" mode. If the result is positive, it's an increase. If negative, it's a decrease.</p>
+                    </div>
+                </div>
             </section>
         </div>
     );
