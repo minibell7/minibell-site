@@ -9,7 +9,7 @@ export default function Home() {
   // Define Categories
   const dailyToolsIds = ['d-day-calculator', 'percentage-calculator', 'unit-converter', 'character-counter'];
   const creatorToolsIds = ['youtube-thumbnail', 'image-converter', 'qr-creator', 'favicon-generator', 'og-generator'];
-  const funLuckIds = ['lotto-korea', 'fortune-cookie', 'zodiac-calculator', 'pomodoro-timer', 'powerball', 'mega-millions', 'euromillions'];
+  const funLuckIds = ['fortune-cookie', 'zodiac-calculator', 'pomodoro-timer', 'powerball', 'mega-millions', 'euromillions'];
 
   const dailyTools = allProjects.filter(p => dailyToolsIds.includes(p.id));
   const creatorTools = allProjects.filter(p => creatorToolsIds.includes(p.id));
@@ -58,6 +58,19 @@ export default function Home() {
         <p className={styles.subtitle}>
           누구나 무료로 사용할 수 있는 웹 도구 모음
         </p>
+      </section>
+
+      {/* Featured Apps Section (Restored) */}
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Featured Apps</h2>
+          <p className={styles.sectionDesc}>AI와 함께 만든 특별한 서비스</p>
+        </div>
+        <div className={styles.grid}>
+          {allProjects.filter(p => p.category === 'app').map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
       </section>
 
       {/* Daily Tools Section */}

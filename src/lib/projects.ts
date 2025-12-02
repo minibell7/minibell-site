@@ -81,15 +81,7 @@ export const projects: Project[] = [
         featured: true,
         category: 'utility'
     },
-    {
-        id: 'lotto-korea',
-        title: 'Korea Lotto 6/45',
-        description: '한국 로또 6/45 행운의 번호를 무료로 생성하세요.',
-        url: '/lotto-korea',
-        tags: ['Lotto', 'Korea', 'Lucky'],
-        featured: true,
-        category: 'utility'
-    },
+
     {
         id: 'powerball',
         title: 'US Powerball',
