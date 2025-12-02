@@ -12,7 +12,7 @@ export const projects: Project[] = [
     {
         id: 'pet-bti',
         title: 'Pet BTI',
-        description: '재미있는 인터랙티브 PWA로 반려동물의 성격 유형을 알아보세요.',
+        description: 'My first "Vibe Coding" project as a non-developer. Built with AI to prove that ideas can become reality. This project turned my doubt into confidence and started my journey.',
         url: 'https://pet-bti.mini-bell.com/',
         tags: ['PWA', 'Next.js', 'Interactive'],
         featured: true,
