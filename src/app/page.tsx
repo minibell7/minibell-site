@@ -10,7 +10,7 @@ export default function Home() {
           minibell.com
         </h1>
         <p className={styles.description}>
-          Building the Future of PWA
+          PWA의 미래를 만들어갑니다
         </p>
 
         <div className={styles.grid}>

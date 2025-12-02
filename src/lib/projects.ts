@@ -11,7 +11,7 @@ export const projects: Project[] = [
     {
         id: 'pet-bti',
         title: 'Pet BTI',
-        description: 'Discover your pet\'s personality type with this fun and interactive PWA.',
+        description: '재미있는 인터랙티브 PWA로 반려동물의 성격 유형을 알아보세요.',
         url: 'https://pet-bti.mini-bell.com/',
         tags: ['PWA', 'Next.js', 'Interactive'],
         featured: true
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     {
         id: 'dreamflow',
         title: 'zombiecheck',
-        description: '당신이 잊고 있거나 사용하지 않는 정기구독을 관리해줍니다. 은행/카드연동이 없어서 개인정보가 유출되지 않습니다.',
+        description: '사용하지 않는 구독을 관리하세요. 은행 연동 없이 안전합니다.',
         url: 'https://zombiecheck.mini-bell.com/',
         tags: ['PWA', 'Dreamflow'],
         featured: true
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     {
         id: 'qr-menu',
         title: 'QR Menu Maker',
-        description: 'Create your own restaurant menu and share it via QR code.',
+        description: '나만의 레스토랑 메뉴를 만들고 QR 코드로 공유하세요.',
         url: 'https://qrmenu.mini-bell.com',
         tags: ['PWA', 'Utility', 'QR Code'],
         featured: true
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     {
         id: 'qr-creator',
         title: 'QR Creator',
-        description: 'Generate a QR code with a custom description for your YouTube channel or website link.',
+        description: 'YouTube 채널이나 웹사이트 링크를 위한 커스텀 QR 코드를 생성하세요.',
         url: 'https://qr.mini-bell.com',
         tags: ['PWA', 'Utility', 'QR Code'],
         featured: true
