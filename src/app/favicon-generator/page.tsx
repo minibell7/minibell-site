@@ -1,102 +1,44 @@
-'use client';
-
-import { useState, useRef } from 'react';
+import type { Metadata } from 'next';
 import styles from './page.module.css';
+import FaviconGeneratorClient from './FaviconGeneratorClient';
 
-export default function FaviconGenerator() {
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
-    const [favicons, setFavicons] = useState<{ size: number; url: string }[]>([]);
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+export const metadata: Metadata = {
+    title: 'Free Favicon Generator | Convert Images to PNG Icons',
+    description: 'Convert any image to high-quality favicons (16x16, 32x32, 192x192, 512x512). Free online tool, no upload required. Download instantly.',
+    keywords: ['favicon generator', 'create favicon', 'image to favicon', 'png icon converter', 'website icon maker'],
+    openGraph: {
+        title: 'Free Favicon Generator | minibell.com',
+        description: 'Convert any image to high-quality favicons instantly. Free & Secure.',
+        type: 'website',
+    }
+};
 
-    const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                const imgUrl = event.target?.result as string;
-                setSelectedImage(imgUrl);
-                generateFavicons(imgUrl);
-            };
-            reader.readAsDataURL(file);
-        }
-    };
-
-    const generateFavicons = (imgUrl: string) => {
-        const img = new Image();
-        img.src = imgUrl;
-        img.onload = () => {
-            const sizes = [16, 32, 192, 512];
-            const newFavicons = sizes.map((size) => {
-                const canvas = document.createElement('canvas');
-                canvas.width = size;
-                canvas.height = size;
-                const ctx = canvas.getContext('2d');
-                if (ctx) {
-                    ctx.drawImage(img, 0, 0, size, size);
-                    return { size, url: canvas.toDataURL('image/png') };
-                }
-                return { size, url: '' };
-            });
-            setFavicons(newFavicons);
-        };
-    };
-
-    const downloadFavicon = (url: string, size: number) => {
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `favicon-${size}x${size}.png`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-
+export default function FaviconGeneratorPage() {
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Favicon Generator</h1>
+        <div className={styles.pageWrapper}>
+            <h1 className={styles.title}>Free Favicon Generator</h1>
             <p className={styles.description}>
                 이미지를 업로드하면 다양한 사이즈의 파비콘(PNG)으로 변환해드립니다.
             </p>
 
-            <div className={`${styles.uploadArea} glass-panel`}>
-                <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                    className={styles.fileInput}
-                    id="file-upload"
-                />
-                <label htmlFor="file-upload" className={styles.uploadLabel}>
-                    {selectedImage ? (
-                        <img src={selectedImage} alt="Preview" className={styles.previewImage} />
-                    ) : (
-                        <div className={styles.uploadPlaceholder}>
-                            <span>이미지 선택 또는 드래그 앤 드롭</span>
-                        </div>
-                    )}
-                </label>
-            </div>
+            <FaviconGeneratorClient />
 
-            {favicons.length > 0 && (
-                <div className={styles.results}>
-                    {favicons.map((favicon) => (
-                        <div key={favicon.size} className={`${styles.resultCard} glass-panel`}>
-                            <div className={styles.iconPreview}>
-                                <img src={favicon.url} alt={`${favicon.size}x${favicon.size}`} width={favicon.size > 64 ? 64 : favicon.size} height={favicon.size > 64 ? 64 : favicon.size} />
-                            </div>
-                            <div className={styles.iconInfo}>
-                                <h3>{favicon.size}x{favicon.size}</h3>
-                                <button
-                                    onClick={() => downloadFavicon(favicon.url, favicon.size)}
-                                    className={styles.downloadBtn}
-                                >
-                                    Download PNG
-                                </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            )}
-            <canvas ref={canvasRef} style={{ display: 'none' }} />
+            <section className={styles.seoSection}>
+                <h2>How to use this Favicon Generator</h2>
+                <ol>
+                    <li>Click the upload area or drag and drop your image.</li>
+                    <li>The tool will automatically generate favicons in standard sizes (16x16, 32x32, 192x192, 512x512).</li>
+                    <li>Preview the icons and click "Download PNG" for the sizes you need.</li>
+                </ol>
+
+                <h2>Supported Sizes</h2>
+                <ul>
+                    <li><strong>16x16:</strong> Standard browser tab icon.</li>
+                    <li><strong>32x32:</strong> High-resolution taskbar icon.</li>
+                    <li><strong>192x192:</strong> Android Chrome home screen icon.</li>
+                    <li><strong>512x512:</strong> PWA splash screen icon.</li>
+                </ul>
+            </section>
         </div>
     );
 }

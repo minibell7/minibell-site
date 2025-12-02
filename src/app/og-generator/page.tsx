@@ -1,102 +1,49 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+import type { Metadata } from 'next';
 import styles from './page.module.css';
+import OGGeneratorClient from './OGGeneratorClient';
 
-export default function OGGenerator() {
-    const [title, setTitle] = useState('My Awesome Page');
-    const [description, setDescription] = useState('This is a description of my page content.');
-    const [imageUrl, setImageUrl] = useState('https://via.placeholder.com/1200x630');
-    const [siteName, setSiteName] = useState('My Site');
-    const [generatedCode, setGeneratedCode] = useState('');
+export const metadata: Metadata = {
+    title: 'Free Open Graph Generator | Preview Social Media Cards',
+    description: 'Create and preview Open Graph (OG) meta tags for Facebook, Twitter, LinkedIn, and more. Optimize your link previews instantly.',
+    keywords: ['open graph generator', 'og tag generator', 'social media preview', 'meta tag generator', 'seo tool'],
+    openGraph: {
+        title: 'Free Open Graph Generator | minibell.com',
+        description: 'Create and preview Open Graph meta tags instantly. Optimize your social media sharing.',
+        type: 'website',
+    }
+};
 
-    useEffect(() => {
-        const code = `
-<meta property="og:type" content="website" />
-<meta property="og:title" content="${title}" />
-<meta property="og:description" content="${description}" />
-<meta property="og:image" content="${imageUrl}" />
-<meta property="og:site_name" content="${siteName}" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="${title}" />
-<meta name="twitter:description" content="${description}" />
-<meta name="twitter:image" content="${imageUrl}" />
-    `.trim();
-        setGeneratedCode(code);
-    }, [title, description, imageUrl, siteName]);
-
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(generatedCode);
-        alert('Copied to clipboard!');
-    };
-
+export default function OGGeneratorPage() {
     return (
-        <div className={styles.container}>
+        <div className={styles.pageWrapper}>
             <h1 className={styles.title}>Open Graph Generator</h1>
             <p className={styles.description}>
                 SNS 공유 시 보여질 미리보기 카드를 만들고 메타 태그를 생성하세요.
             </p>
 
-            <div className={styles.content}>
-                <div className={`${styles.form} glass-panel`}>
-                    <div className={styles.inputGroup}>
-                        <label>Title</label>
-                        <input
-                            type="text"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                            className={styles.input}
-                        />
-                    </div>
-                    <div className={styles.inputGroup}>
-                        <label>Description</label>
-                        <textarea
-                            value={description}
-                            onChange={(e) => setDescription(e.target.value)}
-                            className={styles.textarea}
-                            rows={3}
-                        />
-                    </div>
-                    <div className={styles.inputGroup}>
-                        <label>Image URL</label>
-                        <input
-                            type="text"
-                            value={imageUrl}
-                            onChange={(e) => setImageUrl(e.target.value)}
-                            className={styles.input}
-                        />
-                    </div>
-                    <div className={styles.inputGroup}>
-                        <label>Site Name</label>
-                        <input
-                            type="text"
-                            value={siteName}
-                            onChange={(e) => setSiteName(e.target.value)}
-                            className={styles.input}
-                        />
-                    </div>
-                </div>
+            <OGGeneratorClient />
 
-                <div className={styles.previewSection}>
-                    <h2 className={styles.sectionTitle}>Preview</h2>
-                    <div className={styles.cardPreview}>
-                        <div className={styles.cardImage} style={{ backgroundImage: `url(${imageUrl})` }} />
-                        <div className={styles.cardContent}>
-                            <div className={styles.cardSite}>{siteName.toUpperCase()}</div>
-                            <div className={styles.cardTitle}>{title}</div>
-                            <div className={styles.cardDesc}>{description}</div>
-                        </div>
-                    </div>
+            <section className={styles.seoSection}>
+                <h2>What are Open Graph Tags?</h2>
+                <p>
+                    Open Graph (OG) tags are snippets of code that control how URLs are displayed when shared on social media like Facebook, LinkedIn, and Twitter.
+                </p>
 
-                    <h2 className={styles.sectionTitle}>Code</h2>
-                    <div className={`${styles.codeBlock} glass-panel`}>
-                        <pre>{generatedCode}</pre>
-                        <button onClick={copyToClipboard} className={styles.copyBtn}>
-                            Copy
-                        </button>
-                    </div>
-                </div>
-            </div>
+                <h2>How to use this tool</h2>
+                <ol>
+                    <li>Enter your page title, description, and image URL.</li>
+                    <li>See the real-time preview of how your link will look.</li>
+                    <li>Copy the generated meta tags.</li>
+                    <li>Paste them into the <code>&lt;head&gt;</code> section of your HTML.</li>
+                </ol>
+
+                <h2>Why is this important?</h2>
+                <ul>
+                    <li><strong>Better Click-Through Rates:</strong> Attractive cards get more clicks.</li>
+                    <li><strong>Professional Look:</strong> Ensure your brand looks consistent across platforms.</li>
+                    <li><strong>SEO Benefits:</strong> While not a direct ranking factor, social signals are important.</li>
+                </ul>
+            </section>
         </div>
     );
 }
