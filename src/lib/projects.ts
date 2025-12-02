@@ -55,6 +55,105 @@ export const projects: Project[] = [
         category: 'utility'
     },
     {
+        id: 'youtube-thumbnail',
+        title: 'YouTube Thumbnail Downloader',
+        description: '유튜브 영상의 고화질 썸네일을 추출하고 다운로드하세요.',
+        url: '/youtube-thumbnail',
+        tags: ['Tool', 'YouTube', 'Image'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'image-converter',
+        title: 'WebP Image Converter',
+        description: '이미지를 WebP로 변환하여 웹사이트 속도를 최적화하세요.',
+        url: '/image-converter',
+        tags: ['Tool', 'Image', 'Performance'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'character-counter',
+        title: 'Character Counter',
+        description: '글자 수, 단어 수, 줄 수를 실시간으로 계산하세요.',
+        url: '/character-counter',
+        tags: ['Tool', 'Text', 'Writing'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'lotto-korea',
+        title: 'Korea Lotto 6/45',
+        description: '한국 로또 6/45 행운의 번호를 무료로 생성하세요.',
+        url: '/lotto-korea',
+        tags: ['Lotto', 'Korea', 'Lucky'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'powerball',
+        title: 'US Powerball',
+        description: 'Generate lucky numbers for the US Powerball lottery.',
+        url: '/powerball',
+        tags: ['Lotto', 'USA', 'Powerball'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'mega-millions',
+        title: 'US Mega Millions',
+        description: 'Generate lucky numbers for the US Mega Millions lottery.',
+        url: '/mega-millions',
+        tags: ['Lotto', 'USA', 'Mega Millions'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'euromillions',
+        title: 'EuroMillions',
+        description: 'Generate lucky numbers for the EuroMillions lottery.',
+        url: '/euromillions',
+        tags: ['Lotto', 'Europe', 'EuroMillions'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'euromillions',
+        title: 'EuroMillions',
+        description: 'Generate lucky numbers for the EuroMillions lottery.',
+        url: '/euromillions',
+        tags: ['Lotto', 'Europe', 'EuroMillions'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'fortune-cookie',
+        title: 'Digital Fortune Cookie',
+        description: 'Crack open a cookie to reveal your daily fortune.',
+        url: '/fortune-cookie',
+        tags: ['Fun', 'Fortune', 'Daily'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'zodiac-calculator',
+        title: 'Zodiac Calculator',
+        description: 'Discover your Western and Chinese Zodiac signs.',
+        url: '/zodiac-calculator',
+        tags: ['Fun', 'Zodiac', 'Astrology'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'biorhythm',
+        title: 'Biorhythm Calculator',
+        description: 'Check your Physical, Emotional, and Intellectual cycles.',
+        url: '/biorhythm',
+        tags: ['Fun', 'Health', 'Analysis'],
+        featured: true,
+        category: 'utility'
+    },
+    {
         id: 'og-generator',
         title: 'Open Graph Generator',
         description: 'SNS 공유를 위한 메타 태그와 미리보기 카드를 생성하세요.',
