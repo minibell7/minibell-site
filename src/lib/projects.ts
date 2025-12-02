@@ -118,15 +118,6 @@ export const projects: Project[] = [
         category: 'utility'
     },
     {
-        id: 'euromillions',
-        title: 'EuroMillions',
-        description: 'Generate lucky numbers for the EuroMillions lottery.',
-        url: '/euromillions',
-        tags: ['Lotto', 'Europe', 'EuroMillions'],
-        featured: true,
-        category: 'utility'
-    },
-    {
         id: 'fortune-cookie',
         title: 'Digital Fortune Cookie',
         description: 'Crack open a cookie to reveal your daily fortune.',
@@ -141,15 +132,6 @@ export const projects: Project[] = [
         description: 'Discover your Western and Chinese Zodiac signs.',
         url: '/zodiac-calculator',
         tags: ['Fun', 'Zodiac', 'Astrology'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'biorhythm',
-        title: 'Biorhythm Calculator',
-        description: 'Check your Physical, Emotional, and Intellectual cycles.',
-        url: '/biorhythm',
-        tags: ['Fun', 'Health', 'Analysis'],
         featured: true,
         category: 'utility'
     },

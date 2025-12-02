@@ -88,7 +88,7 @@ const FORTUNES = [
     "Follow the middle path. Neither extreme will make you happy.",
     "For hate is never conquered by hate. Hate is conquered by love.",
     "For the things we have to learn before we can do them, we learn by doing them.",
-    "Fortune Not Found: Abort, Retry, Ignore?",
+
     "From listening comes wisdom and from speaking repentance.",
     "From now on your kindness will lead you to success.",
     "Get your mind set – confidence will lead you on.",
