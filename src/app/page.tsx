@@ -60,19 +60,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Featured Apps Section (Restored) */}
-      <section className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Featured Apps</h2>
-          <p className={styles.sectionDesc}>AI와 함께 만든 특별한 서비스</p>
-        </div>
-        <div className={styles.grid}>
-          {allProjects.filter(p => p.category === 'app').map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      </section>
-
       {/* Daily Tools Section */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
@@ -125,6 +112,19 @@ export default function Home() {
         <div className={`${styles.compactList} ${styles.utilityList}`}>
           {funLuckTools.map((project) => (
             <CompactItem key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
+
+      {/* Featured Apps Section (Restored) */}
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Featured Apps</h2>
+          <p className={styles.sectionDesc}>AI와 함께 만든 특별한 서비스</p>
+        </div>
+        <div className={styles.grid}>
+          {allProjects.filter(p => p.category === 'app').map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </section>
