@@ -1,94 +1,106 @@
-.container {
-  min-height: 100vh;
-  padding: 0 2rem;
-  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15), transparent 50%);
-}
-
 .main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6rem 0;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
-  align-items: center;
+  gap: 4rem;
+  padding-bottom: 4rem;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
   text-align: center;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  padding: 4rem 0;
 }
 
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  letter-spacing: -0.05em;
+  line-height: 1.2;
   background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
-.description {
-  line-height: 1.6;
-  font-size: 1.5rem;
+.subtitle {
+  font-size: 1.25rem;
   color: var(--text-secondary);
   max-width: 600px;
-}
-
-.subDescription {
-  font-size: 1.2rem;
-  color: var(--accent-primary);
-  font-weight: 600;
-  display: block;
-  margin-top: 0.5rem;
+  line-height: 1.6;
 }
 
 .section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
-  position: relative;
-  display: inline-block;
 }
 
 .sectionDesc {
-  font-size: 1.1rem;
   color: var(--text-secondary);
-  margin: -1rem 0 0 0;
+  font-size: 1.1rem;
 }
 
+/* Grid Layout for PC */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
+/* Compact List Layout for Mobile (Utility Section Only) */
+.compactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
-  .sectionTitle {
-    font-size: 2rem;
+  .hero {
+    padding: 2rem 0;
   }
 
-  .main {
-    padding: 4rem 0;
-    gap: 4rem;
+  /* On mobile, utility sections use compact list */
+  .utilityGrid {
+    display: none;
+    /* Hide grid on mobile for utilities */
+  }
+
+  .utilityList {
+    display: flex;
+    /* Show list on mobile */
+  }
+}
+
+/* PC-specific adjustments */
+@media (min-width: 769px) {
+  .utilityGrid {
+    display: grid;
+    /* Show grid on PC */
+  }
+
+  .utilityList {
+    display: none;
+    /* Hide list on PC */
   }
 }

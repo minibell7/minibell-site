@@ -136,6 +136,42 @@ export const projects: Project[] = [
         category: 'utility'
     },
     {
+        id: 'd-day-calculator',
+        title: 'D-Day Calculator',
+        description: 'Calculate days remaining or passed since a special date.',
+        url: '/d-day-calculator',
+        tags: ['Tool', 'Date', 'Anniversary'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'percentage-calculator',
+        title: 'Percentage Calculator',
+        description: 'Calculate discounts, ratios, and percentage changes.',
+        url: '/percentage-calculator',
+        tags: ['Tool', 'Math', 'Calc'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'unit-converter',
+        title: 'Unit Converter',
+        description: 'Convert Length, Weight, Area, and Temperature units.',
+        url: '/unit-converter',
+        tags: ['Tool', 'Unit', 'Convert'],
+        featured: true,
+        category: 'utility'
+    },
+    {
+        id: 'pomodoro-timer',
+        title: 'Pomodoro Timer',
+        description: 'Boost productivity with 25m work / 5m break timer.',
+        url: '/pomodoro-timer',
+        tags: ['Tool', 'Focus', 'Timer'],
+        featured: true,
+        category: 'utility'
+    },
+    {
         id: 'og-generator',
         title: 'Open Graph Generator',
         description: 'SNS 공유를 위한 메타 태그와 미리보기 카드를 생성하세요.',
