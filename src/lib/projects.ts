@@ -34,10 +34,26 @@ export const projects: Project[] = [
     },
     {
         id: 'qr-creator',
-        title: 'QR Creator',
-        description: 'YouTube 채널이나 웹사이트 링크를 위한 커스텀 QR 코드를 생성하세요.',
-        url: 'https://qr.mini-bell.com',
-        tags: ['PWA', 'Utility', 'QR Code'],
+        title: 'QR Code Generator',
+        description: 'URL을 입력하여 즉시 QR 코드를 생성하고 다운로드하세요.',
+        url: '/qr-generator',
+        tags: ['Tool', 'Utility', 'QR Code'],
+        featured: true
+    },
+    {
+        id: 'favicon-generator',
+        title: 'Favicon Generator',
+        description: '이미지를 업로드하여 다양한 사이즈의 파비콘(PNG)을 생성하세요.',
+        url: '/favicon-generator',
+        tags: ['Tool', 'Image', 'Utility'],
+        featured: true
+    },
+    {
+        id: 'og-generator',
+        title: 'Open Graph Generator',
+        description: 'SNS 공유를 위한 메타 태그와 미리보기 카드를 생성하세요.',
+        url: '/og-generator',
+        tags: ['Tool', 'SEO', 'Social'],
         featured: true
     },
     {

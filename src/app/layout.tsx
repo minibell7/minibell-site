@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description: "Showcase of my PWAs and Blog",
 };
 
+import { ThemeProvider } from "@/context/ThemeContext";
+import ThemeToggle from "@/components/ThemeToggle";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,11 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main className="container" style={{ minHeight: '80vh', paddingTop: '2rem' }}>
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <ThemeToggle />
+          <Header />
+          <main className="container" style={{ minHeight: '80vh', paddingTop: '2rem' }}>
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
