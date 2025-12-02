@@ -56,15 +56,15 @@ export default function Home() {
       <section className={styles.hero}>
         <h1 className={styles.title}>Web Utilities</h1>
         <p className={styles.subtitle}>
-          누구나 무료로 사용할 수 있는 웹 도구 모음
+          Free Web Utilities for Everyone
         </p>
       </section>
 
       {/* Daily Tools Section */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>생활 필수 (Daily Tools)</h2>
-          <p className={styles.sectionDesc}>일상 생활에서 자주 쓰이는 계산기와 변환기</p>
+          <h2 className={styles.sectionTitle}>Daily Tools</h2>
+          <p className={styles.sectionDesc}>Essential calculators and converters for everyday use</p>
         </div>
         {/* PC Grid */}
         <div className={`${styles.grid} ${styles.utilityGrid}`}>
@@ -83,8 +83,8 @@ export default function Home() {
       {/* Creator Tools Section */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>이미지/개발 (Creator Tools)</h2>
-          <p className={styles.sectionDesc}>콘텐츠 제작자와 개발자를 위한 도구</p>
+          <h2 className={styles.sectionTitle}>Creator Tools</h2>
+          <p className={styles.sectionDesc}>Utilities for content creators and developers</p>
         </div>
         <div className={`${styles.grid} ${styles.utilityGrid}`}>
           {creatorTools.map((project) => (
@@ -101,8 +101,8 @@ export default function Home() {
       {/* Fun & Luck Section */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>운세/재미 (Fun & Luck)</h2>
-          <p className={styles.sectionDesc}>행운을 시험하고 재미를 찾는 공간</p>
+          <h2 className={styles.sectionTitle}>Fun & Luck</h2>
+          <p className={styles.sectionDesc}>Test your luck and have some fun</p>
         </div>
         <div className={`${styles.grid} ${styles.utilityGrid}`}>
           {funLuckTools.map((project) => (
@@ -120,7 +120,7 @@ export default function Home() {
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Featured Apps</h2>
-          <p className={styles.sectionDesc}>AI와 함께 만든 특별한 서비스</p>
+          <p className={styles.sectionDesc}>Special services built with AI</p>
         </div>
         <div className={styles.grid}>
           {allProjects.filter(p => p.category === 'app').map((project) => (

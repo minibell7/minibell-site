@@ -30,7 +30,7 @@ export const projects: Project[] = [
     {
         id: 'qr-menu',
         title: 'QR Menu Maker',
-        description: '나만의 레스토랑 메뉴를 만들고 QR 코드로 공유하세요.',
+        description: 'Created by a restaurant owner to help fellow business owners. Build digital menus easily. Continuous updates and advanced features planned.',
         url: 'https://qrmenu.mini-bell.com',
         tags: ['PWA', 'Utility', 'QR Code'],
         featured: true,
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     {
         id: 'qr-creator',
         title: 'QR Code Generator',
-        description: 'URL을 입력하여 즉시 QR 코드를 생성하고 다운로드하세요.',
+        description: 'Generate and download QR codes instantly by entering a URL.',
         url: '/qr-generator',
         tags: ['Tool', 'Utility', 'QR Code'],
         featured: true,
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     {
         id: 'favicon-generator',
         title: 'Favicon Generator',
-        description: '이미지를 업로드하여 다양한 사이즈의 파비콘(PNG)을 생성하세요.',
+        description: 'Upload an image to generate favicons (PNG) in various sizes.',
         url: '/favicon-generator',
         tags: ['Tool', 'Image', 'Utility'],
         featured: true,
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     {
         id: 'youtube-thumbnail',
         title: 'YouTube Thumbnail Downloader',
-        description: '유튜브 영상의 고화질 썸네일을 추출하고 다운로드하세요.',
+        description: 'Extract and download high-quality thumbnails from YouTube videos.',
         url: '/youtube-thumbnail',
         tags: ['Tool', 'YouTube', 'Image'],
         featured: true,
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     {
         id: 'image-converter',
         title: 'WebP Image Converter',
-        description: '이미지를 WebP로 변환하여 웹사이트 속도를 최적화하세요.',
+        description: 'Convert images to WebP to optimize website performance.',
         url: '/image-converter',
         tags: ['Tool', 'Image', 'Performance'],
         featured: true,
@@ -75,98 +75,16 @@ export const projects: Project[] = [
     {
         id: 'character-counter',
         title: 'Character Counter',
-        description: '글자 수, 단어 수, 줄 수를 실시간으로 계산하세요.',
+        description: 'Calculate character, word, and line counts in real-time.',
         url: '/character-counter',
         tags: ['Tool', 'Text', 'Writing'],
-        featured: true,
-        category: 'utility'
-    },
-
-    {
-        id: 'powerball',
-        title: 'US Powerball',
-        description: 'Generate lucky numbers for the US Powerball lottery.',
-        url: '/powerball',
-        tags: ['Lotto', 'USA', 'Powerball'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'mega-millions',
-        title: 'US Mega Millions',
-        description: 'Generate lucky numbers for the US Mega Millions lottery.',
-        url: '/mega-millions',
-        tags: ['Lotto', 'USA', 'Mega Millions'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'euromillions',
-        title: 'EuroMillions',
-        description: 'Generate lucky numbers for the EuroMillions lottery.',
-        url: '/euromillions',
-        tags: ['Lotto', 'Europe', 'EuroMillions'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'fortune-cookie',
-        title: 'Digital Fortune Cookie',
-        description: 'Crack open a cookie to reveal your daily fortune.',
-        url: '/fortune-cookie',
-        tags: ['Fun', 'Fortune', 'Daily'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'zodiac-calculator',
-        title: 'Zodiac Calculator',
-        description: 'Discover your Western and Chinese Zodiac signs.',
-        url: '/zodiac-calculator',
-        tags: ['Fun', 'Zodiac', 'Astrology'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'd-day-calculator',
-        title: 'D-Day Calculator',
-        description: 'Calculate days remaining or passed since a special date.',
-        url: '/d-day-calculator',
-        tags: ['Tool', 'Date', 'Anniversary'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'percentage-calculator',
-        title: 'Percentage Calculator',
-        description: 'Calculate discounts, ratios, and percentage changes.',
-        url: '/percentage-calculator',
-        tags: ['Tool', 'Math', 'Calc'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'unit-converter',
-        title: 'Unit Converter',
-        description: 'Convert Length, Weight, Area, and Temperature units.',
-        url: '/unit-converter',
-        tags: ['Tool', 'Unit', 'Convert'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'pomodoro-timer',
-        title: 'Pomodoro Timer',
-        description: 'Boost productivity with 25m work / 5m break timer.',
-        url: '/pomodoro-timer',
-        tags: ['Tool', 'Focus', 'Timer'],
         featured: true,
         category: 'utility'
     },
     {
         id: 'og-generator',
         title: 'Open Graph Generator',
-        description: 'SNS 공유를 위한 메타 태그와 미리보기 카드를 생성하세요.',
+        description: 'Generate meta tags and preview cards for social media sharing.',
         url: '/og-generator',
         tags: ['Tool', 'SEO', 'Social'],
         featured: true,
@@ -174,8 +92,8 @@ export const projects: Project[] = [
     },
     {
         id: 'recipe-blog',
-        title: '실제 사장님들을 위한 판매용 메뉴 레시피',
-        description: '식당 운영에 도움이 되는 실전 레시피와 노하우를 공유합니다.',
+        title: 'Commercial Recipes for Owners',
+        description: 'Sharing practical recipes and know-how for restaurant operations.',
         url: 'https://facilitator-y.tistory.com/',
         tags: ['Blog', 'Recipe', 'Business'],
         featured: true,
@@ -183,8 +101,8 @@ export const projects: Project[] = [
     },
     {
         id: 'quiz-blog',
-        title: '재미있는 상식 퀴즈',
-        description: '심심할 때 풀기 좋은 다양한 상식 퀴즈를 만나보세요.',
+        title: 'Fun Trivia Quizzes',
+        description: 'Enjoy various trivia quizzes when you need a break.',
         url: 'https://5-hint-quiz.tistory.com/',
         tags: ['Blog', 'Quiz', 'Fun'],
         featured: true,
