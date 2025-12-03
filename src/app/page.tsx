@@ -6,7 +6,7 @@ import Link from 'next/link';
 // Simple Typing Animation Component
 const TypingText = ({ text }: { text: string }) => {
   return (
-    <span className={styles.title}>
+    <h1 className={styles.title}>
       {text.split('').map((char, index) => (
         <span
           key={index}
@@ -20,7 +20,7 @@ const TypingText = ({ text }: { text: string }) => {
           {char}
         </span>
       ))}
-    </span>
+    </h1>
   );
 };
 
