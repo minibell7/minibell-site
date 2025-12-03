@@ -65,7 +65,7 @@ export default function FaviconGeneratorClient() {
                         <img src={selectedImage} alt="Preview" className={styles.previewImage} />
                     ) : (
                         <div className={styles.uploadPlaceholder}>
-                            <span>이미지 선택 또는 드래그 앤 드롭</span>
+                            <span>Select Image or Drag & Drop</span>
                         </div>
                     )}
                 </label>

@@ -18,7 +18,7 @@ export default function CharacterCounterPage() {
         <div className={styles.pageWrapper}>
             <h1 className={styles.title}>Character Counter</h1>
             <p className={styles.description}>
-                글자 수(공백 포함/제외), 단어 수, 줄 수를 실시간으로 확인하세요.
+                Check character count (with/without spaces), word count, and line count in real-time.
             </p>
 
             <CounterClient />

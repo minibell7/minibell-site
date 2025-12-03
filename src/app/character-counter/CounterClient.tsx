@@ -18,19 +18,19 @@ export default function CounterClient() {
             <div className={`${styles.statsGrid} glass-panel`}>
                 <div className={styles.statItem}>
                     <div className={styles.statValue}>{stats.charsWithSpace}</div>
-                    <div className={styles.statLabel}>공백 포함</div>
+                    <div className={styles.statLabel}>Chars (with space)</div>
                 </div>
                 <div className={styles.statItem}>
                     <div className={styles.statValue}>{stats.charsNoSpace}</div>
-                    <div className={styles.statLabel}>공백 제외</div>
+                    <div className={styles.statLabel}>Chars (no space)</div>
                 </div>
                 <div className={styles.statItem}>
                     <div className={styles.statValue}>{stats.words}</div>
-                    <div className={styles.statLabel}>단어 수</div>
+                    <div className={styles.statLabel}>Words</div>
                 </div>
                 <div className={styles.statItem}>
                     <div className={styles.statValue}>{stats.lines}</div>
-                    <div className={styles.statLabel}>줄 수</div>
+                    <div className={styles.statLabel}>Lines</div>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@ export default function CounterClient() {
                 <textarea
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    placeholder="여기에 텍스트를 입력하거나 붙여넣으세요..."
+                    placeholder="Type or paste your text here..."
                     className={styles.textarea}
                     spellCheck={false}
                 />

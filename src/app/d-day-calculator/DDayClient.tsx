@@ -69,7 +69,7 @@ export default function DDayClient() {
                         checked={isDay1}
                         onChange={(e) => setIsDay1(e.target.checked)}
                     />
-                    <label htmlFor="day1">Include today as Day 1 (오늘부터 1일)</label>
+                    <label htmlFor="day1">Include today as Day 1</label>
                 </div>
 
                 {/* Result Display */}

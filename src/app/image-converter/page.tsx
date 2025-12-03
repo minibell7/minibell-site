@@ -18,7 +18,7 @@ export default function ImageConverterPage() {
         <div className={styles.pageWrapper}>
             <h1 className={styles.title}>WebP Image Converter</h1>
             <p className={styles.description}>
-                이미지를 WebP로 변환하여 웹사이트 속도를 최적화하세요.
+                Convert images to WebP to optimize website speed.
             </p>
 
             <ConverterClient />

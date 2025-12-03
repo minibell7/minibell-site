@@ -18,7 +18,7 @@ export default function FaviconGeneratorPage() {
         <div className={styles.pageWrapper}>
             <h1 className={styles.title}>Free Favicon Generator</h1>
             <p className={styles.description}>
-                이미지를 업로드하면 다양한 사이즈의 파비콘(PNG)으로 변환해드립니다.
+                Upload an image to convert it into favicons (PNG) of various sizes.
             </p>
 
             <FaviconGeneratorClient />

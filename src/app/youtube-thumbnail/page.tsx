@@ -18,7 +18,7 @@ export default function YoutubeThumbnailPage() {
         <div className={styles.pageWrapper}>
             <h1 className={styles.title}>YouTube Thumbnail Downloader</h1>
             <p className={styles.description}>
-                유튜브 영상의 고화질 썸네일을 즉시 추출하여 다운로드하세요.
+                Instantly extract and download high-quality thumbnails from YouTube videos.
             </p>
 
             <ThumbnailClient />

@@ -18,7 +18,7 @@ export default function QRGeneratorPage() {
         <div className={styles.pageWrapper}>
             <h1 className={styles.title}>Free QR Code Generator</h1>
             <p className={styles.description}>
-                URL을 입력하면 즉시 QR 코드를 생성해드립니다. 평생 무료, 설치 없음.
+                Enter a URL to instantly generate a QR code. Forever free, no installation required.
             </p>
 
             <QRGeneratorClient />

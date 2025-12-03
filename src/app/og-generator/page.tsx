@@ -18,7 +18,7 @@ export default function OGGeneratorPage() {
         <div className={styles.pageWrapper}>
             <h1 className={styles.title}>Open Graph Generator</h1>
             <p className={styles.description}>
-                SNS 공유 시 보여질 미리보기 카드를 만들고 메타 태그를 생성하세요.
+                Create preview cards and generate meta tags for social media sharing.
             </p>
 
             <OGGeneratorClient />
