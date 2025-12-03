@@ -154,6 +154,15 @@ export const projects: Project[] = [
         category: 'utility'
     },
     {
+        id: 'neon-minesweeper',
+        title: 'Neon Minesweeper',
+        description: 'Classic puzzle game with a Cyberpunk Neon aesthetic.',
+        url: '/neon-minesweeper',
+        tags: ['Game', 'Puzzle', 'Neon'],
+        featured: true,
+        category: 'utility'
+    },
+    {
         id: 'zodiac-calculator',
         title: 'Zodiac Calculator',
         description: 'Discover your Western and Chinese Zodiac signs.',
