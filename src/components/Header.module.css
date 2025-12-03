@@ -1,12 +1,13 @@
 .header {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border-color);
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     position: sticky;
     top: 0;
     z-index: 50;
+    transition: all 0.3s ease;
 }
 
 .nav {
@@ -22,9 +23,17 @@
     font-size: 1.5rem;
     font-weight: 800;
     background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.03em;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+    transform: scale(1.05);
 }
 
 .links {
@@ -39,8 +48,24 @@
     font-weight: 500;
     color: var(--text-secondary);
     transition: color 0.2s;
+    position: relative;
 }
 
 .links a:hover {
     color: var(--text-primary);
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
 }

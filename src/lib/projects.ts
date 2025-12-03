@@ -21,9 +21,9 @@ export const projects: Project[] = [
     {
         id: 'dreamflow',
         title: 'zombiecheck',
-        description: 'Find forgotten "zombie" subscriptions. 100% Local & Private. Compare your memory vs actual bills. Born from a real experience of paying for a closed shop\'s insurance for 1.5 years!',
+        description: 'Find forgotten "zombie" subscriptions that silently drain your wallet. 100% Local & Private - no bank connection required. Compare your memory vs actual bills to spot hidden costs. Born from a real experience of paying for a closed shop\'s insurance for 1.5 years!',
         url: 'https://zombiecheck.mini-bell.com/',
-        tags: ['PWA', 'Dreamflow'],
+        tags: ['PWA', 'Finance', 'Privacy'],
         featured: true,
         category: 'app'
     },

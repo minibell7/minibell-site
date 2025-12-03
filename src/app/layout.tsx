@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
+import ThemeToggle from "@/components/ThemeToggle";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
+
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "mini-bell.com",
   description: "Showcase of my PWAs and Blog",
 };
-
-import { ThemeProvider } from "@/context/ThemeContext";
-import ThemeToggle from "@/components/ThemeToggle";
 
 export default function RootLayout({
   children,
@@ -21,11 +25,15 @@ export default function RootLayout({
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2875879574828967" crossOrigin="anonymous"></script>
       </head>
-      <body>
+      <body className={outfit.className}>
+        <div className="background-gradient" />
+        <div className="background-noise" />
         <ThemeProvider>
+          <CustomCursor />
+          <ScrollProgress />
           <ThemeToggle />
           <Header />
-          <main className="container" style={{ minHeight: '80vh', paddingTop: '2rem' }}>
+          <main className="container" style={{ minHeight: '80vh', paddingTop: '2rem', position: 'relative', zIndex: 1 }}>
             {children}
           </main>
           <Footer />

@@ -3,6 +3,27 @@ import ProjectCard from '@/components/ProjectCard';
 import { getFeaturedProjects } from '@/lib/projects';
 import Link from 'next/link';
 
+// Simple Typing Animation Component
+const TypingText = ({ text }: { text: string }) => {
+  return (
+    <span className={styles.title}>
+      {text.split('').map((char, index) => (
+        <span
+          key={index}
+          style={{
+            opacity: 0,
+            animation: `fadeInUp 0.1s ease-out forwards ${index * 0.05}s`,
+            display: 'inline-block',
+            minWidth: char === ' ' ? '0.3em' : 'auto'
+          }}
+        >
+          {char}
+        </span>
+      ))}
+    </span>
+  );
+};
+
 export default function Home() {
   const allProjects = getFeaturedProjects();
 
@@ -22,9 +43,10 @@ export default function Home() {
       alignItems: 'center',
       justifyContent: 'space-between',
       padding: '1rem',
-      borderRadius: '12px',
+      borderRadius: '16px',
       textDecoration: 'none',
-      color: 'inherit'
+      color: 'inherit',
+      transition: 'transform 0.2s'
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         <div style={{ fontSize: '1.5rem' }}>
@@ -54,14 +76,14 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
-        <h1 className={styles.title}>Web Utilities</h1>
+        <TypingText text="Web Utilities" />
         <p className={styles.subtitle}>
           Free Web Utilities for Everyone
         </p>
       </section>
 
       {/* Daily Tools Section */}
-      <section className={styles.section}>
+      <section className={styles.section} style={{ animationDelay: '0.2s' }}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Daily Tools</h2>
           <p className={styles.sectionDesc}>Essential calculators and converters for everyday use</p>
@@ -81,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Creator Tools Section */}
-      <section className={styles.section}>
+      <section className={styles.section} style={{ animationDelay: '0.4s' }}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Creator Tools</h2>
           <p className={styles.sectionDesc}>Utilities for content creators and developers</p>
@@ -99,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Fun & Luck Section */}
-      <section className={styles.section}>
+      <section className={styles.section} style={{ animationDelay: '0.6s' }}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Fun & Luck</h2>
           <p className={styles.sectionDesc}>Test your luck and have some fun</p>
@@ -117,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Featured Apps Section (Restored) */}
-      <section className={styles.section}>
+      <section className={styles.section} style={{ animationDelay: '0.8s' }}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Featured Apps</h2>
           <p className={styles.sectionDesc}>Special services built with AI</p>
