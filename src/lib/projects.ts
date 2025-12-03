@@ -154,6 +154,15 @@ export const projects: Project[] = [
         category: 'utility'
     },
     {
+        id: 'neon-blocks',
+        title: 'Neon Blocks',
+        description: 'Cyberpunk style block puzzle game. Stack and clear lines!',
+        url: '/neon-blocks',
+        tags: ['Game', 'Puzzle', 'Neon'],
+        featured: true,
+        category: 'utility'
+    },
+    {
         id: 'neon-minesweeper',
         title: 'Neon Minesweeper',
         description: 'Classic puzzle game with a Cyberpunk Neon aesthetic.',
