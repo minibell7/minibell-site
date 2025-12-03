@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import Image from 'next/image';
 import ProjectCard from '@/components/ProjectCard';
 import { getFeaturedProjects } from '@/lib/projects';
 import Link from 'next/link';
@@ -76,6 +77,16 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
+        <div className={styles.heroImage}>
+          <Image
+            src="/images/hero-bg.png"
+            alt="Abstract Hero Background"
+            width={1000}
+            height={1000}
+            priority
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
         <TypingText text="Web Utilities" />
         <p className={styles.subtitle}>
           Free Web Utilities for Everyone
