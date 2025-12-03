@@ -5,7 +5,7 @@ export interface Project {
     url: string;
     tags: string[];
     featured: boolean;
-    category: 'app' | 'utility' | 'content';
+    category: 'app' | 'utility' | 'content' | 'game';
 }
 
 export const projects: Project[] = [
@@ -160,7 +160,7 @@ export const projects: Project[] = [
         url: '/neon-blocks',
         tags: ['Game', 'Puzzle', 'Neon'],
         featured: true,
-        category: 'utility'
+        category: 'game'
     },
     {
         id: 'neon-minesweeper',
@@ -169,7 +169,7 @@ export const projects: Project[] = [
         url: '/neon-minesweeper',
         tags: ['Game', 'Puzzle', 'Neon'],
         featured: true,
-        category: 'utility'
+        category: 'game'
     },
     {
         id: 'zodiac-calculator',

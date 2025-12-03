@@ -149,6 +149,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Games Section */}
+      <section className={styles.section} style={{ animationDelay: '0.7s' }}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Neon Arcade</h2>
+          <p className={styles.sectionDesc}>Cyberpunk style retro games</p>
+        </div>
+        <div className={`${styles.grid} ${styles.utilityGrid}`}>
+          {allProjects.filter(p => p.category === 'game').map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+        <div className={`${styles.compactList} ${styles.utilityList}`}>
+          {allProjects.filter(p => p.category === 'game').map((project) => (
+            <CompactItem key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
+
       {/* Featured Apps Section (Restored) */}
       <section className={styles.section} style={{ animationDelay: '0.8s' }}>
         <div className={styles.sectionHeader}>
