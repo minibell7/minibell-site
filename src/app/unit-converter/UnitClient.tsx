@@ -14,15 +14,26 @@ const UNITS: Record<Category, string[]> = {
 
 export default function UnitClient() {
     const [category, setCategory] = useState<Category>('Length');
-    const [fromUnit, setFromUnit] = useState(UNITS['Length'][0]);
-    const [toUnit, setToUnit] = useState(UNITS['Length'][1]);
+    const [fromUnit, setFromUnit] = useState(UNITS['Length'][3]); // Foot
+    const [toUnit, setToUnit] = useState(UNITS['Length'][0]); // Meter
     const [value, setValue] = useState('');
     const [result, setResult] = useState('');
 
     // Reset units when category changes
     useEffect(() => {
-        setFromUnit(UNITS[category][0]);
-        setToUnit(UNITS[category][1]);
+        if (category === 'Length') {
+            setFromUnit(UNITS['Length'][3]); // Foot
+            setToUnit(UNITS['Length'][0]); // Meter
+        } else if (category === 'Weight') {
+            setFromUnit(UNITS['Weight'][2]); // Pound
+            setToUnit(UNITS['Weight'][0]); // Kilogram
+        } else if (category === 'Temperature') {
+            setFromUnit(UNITS['Temperature'][1]); // Fahrenheit
+            setToUnit(UNITS['Temperature'][0]); // Celsius
+        } else if (category === 'Area') {
+            setFromUnit(UNITS['Area'][2]); // Square Foot
+            setToUnit(UNITS['Area'][0]); // Square Meter
+        }
         setValue('');
         setResult('');
     }, [category]);

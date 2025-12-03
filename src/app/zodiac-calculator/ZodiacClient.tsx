@@ -66,6 +66,7 @@ export default function ZodiacClient() {
                 <label className={styles.label}>Enter your Birth Date:</label>
                 <input
                     type="date"
+                    lang="en"
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}
                     className={styles.dateInput}

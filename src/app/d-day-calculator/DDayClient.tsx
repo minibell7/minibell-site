@@ -7,7 +7,7 @@ export default function DDayClient() {
     const [targetDate, setTargetDate] = useState('');
     const [title, setTitle] = useState('');
     const [result, setResult] = useState<{ days: number, type: 'past' | 'future' | 'today' } | null>(null);
-    const [isDay1, setIsDay1] = useState(true); // "Today is Day 1" option (common in Korea)
+    const [isDay1, setIsDay1] = useState(false); // Default to Day 0 for US style
 
     const calculateDDay = () => {
         if (!targetDate) return;
@@ -56,6 +56,7 @@ export default function DDayClient() {
                     <label className={styles.label}>Target Date</label>
                     <input
                         type="date"
+                        lang="en"
                         value={targetDate}
                         onChange={(e) => setTargetDate(e.target.value)}
                         className={styles.dateInput}
@@ -90,20 +91,22 @@ export default function DDayClient() {
                 )}
             </div>
 
-            {/* Common Anniversaries (100 days, etc) - Only show if past or today */}
+            {/* Common Anniversaries (Yearly) - Only show if past or today */}
             {result && (result.type === 'past' || result.type === 'today') && targetDate && (
                 <div className={`${styles.card} glass-panel`}>
                     <h3>Anniversaries</h3>
                     <div className={styles.anniversaryList}>
-                        {[100, 200, 300, 365, 500, 1000].map(days => {
+                        {[1, 2, 3, 5, 10].map(years => {
                             const date = new Date(targetDate);
-                            // If isDay1 is true, we subtract 1 day from calculation because start date is day 1
-                            // e.g. Start Jan 1. 100th day is Apr 10 (not Apr 11)
-                            const addDays = isDay1 ? days - 1 : days;
-                            date.setDate(date.getDate() + addDays);
+                            date.setFullYear(date.getFullYear() + years);
+
+                            // If isDay1 is true, logic might be slightly different for "days count" but for yearly anniversary date it's usually just +Year
+                            // However, if we want to show "Nth day", we stick to date calculation.
+                            // For US style, "1 Year Anniversary" is just same date next year.
+
                             return (
-                                <div key={days} className={styles.anniversaryItem}>
-                                    <span className={styles.annivLabel}>{days} days</span>
+                                <div key={years} className={styles.anniversaryItem}>
+                                    <span className={styles.annivLabel}>{years} Year{years > 1 ? 's' : ''}</span>
                                     <span className={styles.annivDate}>{date.toLocaleDateString()}</span>
                                 </div>
                             );
