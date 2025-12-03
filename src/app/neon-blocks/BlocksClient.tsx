@@ -23,8 +23,8 @@ export default function BlocksClient() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [level, setLevel] = useState(1);
 
-    const requestRef = useRef<number>();
-    const lastTimeRef = useRef<number>();
+    const requestRef = useRef<number | null>(null);
+    const lastTimeRef = useRef<number | null>(null);
     const dropCounterRef = useRef(0);
     const dropIntervalRef = useRef(1000);
 
