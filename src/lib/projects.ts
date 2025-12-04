@@ -27,15 +27,15 @@ export const projects: Project[] = [
         featured: true,
         category: 'app'
     },
-    {
-        id: 'qr-menu',
-        title: 'QR Menu Maker',
-        description: 'Created by a restaurant owner to help fellow business owners. Build digital menus easily. Continuous updates and advanced features planned.',
-        url: 'https://qrmenu.mini-bell.com',
-        tags: ['PWA', 'Utility', 'QR Code'],
-        featured: true,
-        category: 'app'
-    },
+    // {
+    //     id: 'qr-menu',
+    //     title: 'QR Menu Maker',
+    //     description: 'Created by a restaurant owner to help fellow business owners. Build digital menus easily. Continuous updates and advanced features planned.',
+    //     url: 'https://qrmenu.mini-bell.com',
+    //     tags: ['PWA', 'Utility', 'QR Code'],
+    //     featured: true,
+    //     category: 'app'
+    // },
     {
         id: 'qr-creator',
         title: 'QR Code Generator',
