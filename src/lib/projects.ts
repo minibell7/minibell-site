@@ -12,21 +12,11 @@ export interface Project {
 export const projects: Project[] = [
     // --- Section 1: Finance & Health ---
     {
-        id: 'fasting-tracker',
-        title: 'Intermittent Fasting Tracker',
-        description: 'Simple 16:8 fasting timer with progress tracking. Saves your status automatically.',
-        url: '/fasting-tracker',
-        tags: ['Tool', 'Health', 'Timer'],
-        featured: true,
-        category: 'utility',
-        section: 'finance-health'
-    },
-    {
-        id: 'loan-calculator',
-        title: 'Loan Calculator',
-        description: 'Estimate monthly payments and total interest.',
-        url: '/loan-calculator',
-        tags: ['Tool', 'Finance', 'Calc'],
+        id: 'bmi-calculator',
+        title: 'BMI Calculator',
+        description: 'Check your Body Mass Index and health category.',
+        url: '/bmi-calculator',
+        tags: ['Tool', 'Health', 'Fitness'],
         featured: true,
         category: 'utility',
         section: 'finance-health'
@@ -42,6 +32,26 @@ export const projects: Project[] = [
         section: 'finance-health'
     },
     {
+        id: 'loan-calculator',
+        title: 'Loan Calculator',
+        description: 'Estimate monthly payments and total interest.',
+        url: '/loan-calculator',
+        tags: ['Tool', 'Finance', 'Calc'],
+        featured: true,
+        category: 'utility',
+        section: 'finance-health'
+    },
+    {
+        id: 'fasting-tracker',
+        title: 'Intermittent Fasting Tracker',
+        description: 'Simple 16:8 fasting timer with progress tracking. Saves your status automatically.',
+        url: '/fasting-tracker',
+        tags: ['Tool', 'Health', 'Timer'],
+        featured: true,
+        category: 'utility',
+        section: 'finance-health'
+    },
+    {
         id: 'tip-calculator',
         title: 'Tip Calculator',
         description: 'Calculate gratuity and split bills instantly.',
@@ -51,28 +61,8 @@ export const projects: Project[] = [
         category: 'utility',
         section: 'finance-health'
     },
-    {
-        id: 'bmi-calculator',
-        title: 'BMI Calculator',
-        description: 'Check your Body Mass Index and health category.',
-        url: '/bmi-calculator',
-        tags: ['Tool', 'Health', 'Fitness'],
-        featured: true,
-        category: 'utility',
-        section: 'finance-health'
-    },
 
     // --- Section 2: Daily Essentials ---
-    {
-        id: 'password-generator',
-        title: 'Password Generator',
-        description: 'Generate strong, secure, and random passwords.',
-        url: '/password-generator',
-        tags: ['Tool', 'Security', 'Privacy'],
-        featured: true,
-        category: 'utility',
-        section: 'daily-essentials'
-    },
     {
         id: 'unit-converter',
         title: 'Unit Converter',
@@ -114,6 +104,16 @@ export const projects: Project[] = [
         section: 'daily-essentials'
     },
     {
+        id: 'password-generator',
+        title: 'Password Generator',
+        description: 'Generate strong, secure, and random passwords.',
+        url: '/password-generator',
+        tags: ['Tool', 'Security', 'Privacy'],
+        featured: true,
+        category: 'utility',
+        section: 'daily-essentials'
+    },
+    {
         id: 'pomodoro-timer',
         title: 'Pomodoro Timer',
         description: 'Boost productivity with 25m work / 5m break timer.',
@@ -126,11 +126,31 @@ export const projects: Project[] = [
 
     // --- Section 3: Creator Tools ---
     {
+        id: 'youtube-thumbnail',
+        title: 'YouTube Thumbnail Downloader',
+        description: 'Extract high-quality thumbnails from YouTube videos.',
+        url: '/youtube-thumbnail',
+        tags: ['Tool', 'YouTube', 'Image'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+    {
         id: 'qr-creator',
         title: 'QR Code Generator',
         description: 'Generate and download QR codes instantly.',
         url: '/qr-generator',
         tags: ['Tool', 'Utility', 'QR Code'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+    {
+        id: 'image-converter',
+        title: 'WebP Image Converter',
+        description: 'Convert images to WebP for better performance.',
+        url: '/image-converter',
+        tags: ['Tool', 'Image', 'Performance'],
         featured: true,
         category: 'utility',
         section: 'creator-tools'
@@ -146,31 +166,11 @@ export const projects: Project[] = [
         section: 'creator-tools'
     },
     {
-        id: 'youtube-thumbnail',
-        title: 'YouTube Thumbnail Downloader',
-        description: 'Extract high-quality thumbnails from YouTube videos.',
-        url: '/youtube-thumbnail',
-        tags: ['Tool', 'YouTube', 'Image'],
-        featured: true,
-        category: 'utility',
-        section: 'creator-tools'
-    },
-    {
         id: 'favicon-generator',
         title: 'Favicon Generator',
         description: 'Generate favicons (PNG) in various sizes.',
         url: '/favicon-generator',
         tags: ['Tool', 'Image', 'Utility'],
-        featured: true,
-        category: 'utility',
-        section: 'creator-tools'
-    },
-    {
-        id: 'image-converter',
-        title: 'WebP Image Converter',
-        description: 'Convert images to WebP for better performance.',
-        url: '/image-converter',
-        tags: ['Tool', 'Image', 'Performance'],
         featured: true,
         category: 'utility',
         section: 'creator-tools'
@@ -218,26 +218,6 @@ export const projects: Project[] = [
         section: 'fun-arcade'
     },
     {
-        id: 'zodiac-calculator',
-        title: 'Zodiac Calculator',
-        description: 'Discover your Western and Chinese Zodiac signs.',
-        url: '/zodiac-calculator',
-        tags: ['Fun', 'Zodiac', 'Astrology'],
-        featured: true,
-        category: 'utility',
-        section: 'fun-arcade'
-    },
-    {
-        id: 'fortune-cookie',
-        title: 'Digital Fortune Cookie',
-        description: 'Crack open a cookie to reveal your daily fortune.',
-        url: '/fortune-cookie',
-        tags: ['Fun', 'Fortune', 'Daily'],
-        featured: true,
-        category: 'utility',
-        section: 'fun-arcade'
-    },
-    {
         id: 'neon-blocks',
         title: 'Neon Blocks',
         description: 'Cyberpunk style block puzzle game.',
@@ -255,6 +235,26 @@ export const projects: Project[] = [
         tags: ['Game', 'Puzzle', 'Neon'],
         featured: true,
         category: 'game',
+        section: 'fun-arcade'
+    },
+    {
+        id: 'zodiac-calculator',
+        title: 'Zodiac Calculator',
+        description: 'Discover your Western and Chinese Zodiac signs.',
+        url: '/zodiac-calculator',
+        tags: ['Fun', 'Zodiac', 'Astrology'],
+        featured: true,
+        category: 'utility',
+        section: 'fun-arcade'
+    },
+    {
+        id: 'fortune-cookie',
+        title: 'Digital Fortune Cookie',
+        description: 'Crack open a cookie to reveal your daily fortune.',
+        url: '/fortune-cookie',
+        tags: ['Fun', 'Fortune', 'Daily'],
+        featured: true,
+        category: 'utility',
         section: 'fun-arcade'
     },
 
