@@ -12,6 +12,26 @@ export interface Project {
 export const projects: Project[] = [
     // --- Section 1: Finance & Health ---
     {
+        id: 'tax-estimator',
+        title: 'US Gig Worker Tax Estimator',
+        description: 'Estimate your 2024-2025 federal and state taxes as a freelancer. Real-time calculation.',
+        url: '/tax-estimator',
+        tags: ['Tool', 'Finance', 'Tax'],
+        featured: true,
+        category: 'utility',
+        section: 'finance-health'
+    },
+    {
+        id: 'fasting-tracker',
+        title: 'Intermittent Fasting Tracker',
+        description: 'Simple 16:8 fasting timer with progress tracking. Saves your status automatically.',
+        url: '/fasting-tracker',
+        tags: ['Tool', 'Health', 'Timer'],
+        featured: true,
+        category: 'utility',
+        section: 'finance-health'
+    },
+    {
         id: 'loan-calculator',
         title: 'Loan Calculator',
         description: 'Estimate monthly payments and total interest.',
