@@ -196,6 +196,28 @@
         flex-direction: row;
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .panel {
+        min-width: 80px;
+        padding: 0.5rem;
+    }
+
+    .controls {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+        order: 10;
+    }
+
+    .controlBtn {
+        padding: 1.5rem;
+        font-size: 2rem;
+        background: rgba(255, 255, 255, 0.15);
     }
 
     .board {
