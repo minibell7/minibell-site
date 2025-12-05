@@ -15,12 +15,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // Project routes
-    const projectRoutes = projects.map((project) => ({
-        url: `${baseUrl}${project.url}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.8,
-    }));
+    const projectRoutes = projects
+        .filter((project) => project.url.startsWith('/'))
+        .map((project) => ({
+            url: `${baseUrl}${project.url}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+        }));
 
     return [...routes, ...projectRoutes];
 }
