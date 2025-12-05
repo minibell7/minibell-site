@@ -33,6 +33,7 @@ export default function Home() {
   const dailyEssentialsTools = allProjects.filter(p => p.section === 'daily-essentials');
   const creatorTools = allProjects.filter(p => p.section === 'creator-tools');
   const funArcadeTools = allProjects.filter(p => p.section === 'fun-arcade');
+  const featuredApps = allProjects.filter(p => p.section === 'featured-app');
 
   // Helper for compact list item (Mobile)
   const CompactItem = ({ project }: { project: any }) => (
@@ -163,6 +164,17 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </main>
-  );
+
+      {/* Section 5: Featured Apps (Personal Projects) */}
+      <section className={styles.section} style={{ animationDelay: '1.0s' }}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Featured Apps</h2>
+          <p className={styles.sectionDesc}>Special projects built with passion</p>
+        </div>
+        <div className={styles.grid}>
+          {featuredApps.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
 }

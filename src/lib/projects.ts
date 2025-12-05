@@ -6,7 +6,7 @@ export interface Project {
     tags: string[];
     featured: boolean;
     category: 'app' | 'utility' | 'content' | 'game';
-    section?: 'finance-health' | 'daily-essentials' | 'creator-tools' | 'fun-arcade';
+    section?: 'finance-health' | 'daily-essentials' | 'creator-tools' | 'fun-arcade' | 'featured-app';
 }
 
 export const projects: Project[] = [
@@ -49,16 +49,6 @@ export const projects: Project[] = [
         tags: ['Tool', 'Health', 'Fitness'],
         featured: true,
         category: 'utility',
-        section: 'finance-health'
-    },
-    {
-        id: 'dreamflow',
-        title: 'zombiecheck',
-        description: 'Find forgotten "zombie" subscriptions. 100% Local & Private.',
-        url: 'https://zombiecheck.mini-bell.com/',
-        tags: ['PWA', 'Finance', 'Privacy'],
-        featured: true,
-        category: 'app',
         section: 'finance-health'
     },
 
@@ -109,6 +99,16 @@ export const projects: Project[] = [
         description: 'Calculate days remaining or passed since a special date.',
         url: '/d-day-calculator',
         tags: ['Tool', 'Date', 'Anniversary'],
+        featured: true,
+        category: 'utility',
+        section: 'daily-essentials'
+    },
+    {
+        id: 'pomodoro-timer',
+        title: 'Pomodoro Timer',
+        description: 'Boost productivity with 25m work / 5m break timer.',
+        url: '/pomodoro-timer',
+        tags: ['Tool', 'Focus', 'Timer'],
         featured: true,
         category: 'utility',
         section: 'daily-essentials'
@@ -247,26 +247,30 @@ export const projects: Project[] = [
         category: 'game',
         section: 'fun-arcade'
     },
+
+    // --- Section 5: Featured Apps (Personal Projects) ---
+    {
+        id: 'dreamflow',
+        title: 'zombiecheck',
+        description: 'Find forgotten "zombie" subscriptions that silently drain your wallet. 100% Local & Private - no bank connection required. Compare your memory vs actual bills to spot hidden costs. Born from a real experience of paying for a closed shop\'s insurance for 1.5 years!',
+        url: 'https://zombiecheck.mini-bell.com/',
+        tags: ['PWA', 'Finance', 'Privacy'],
+        featured: true,
+        category: 'app',
+        section: 'featured-app'
+    },
     {
         id: 'pet-bti',
         title: 'Pet BTI',
-        description: 'Analyze your pet\'s personality type with AI.',
+        description: 'My first "Vibe Coding" project as a non-developer. Built with AI to prove that ideas can become reality. This project turned my doubt into confidence and started my journey.',
         url: 'https://pet-bti.mini-bell.com/',
         tags: ['PWA', 'Fun', 'AI'],
         featured: true,
         category: 'app',
-        section: 'fun-arcade'
+        section: 'featured-app'
     },
-    {
-        id: 'pomodoro-timer',
-        title: 'Pomodoro Timer',
-        description: 'Boost productivity with 25m work / 5m break timer.',
-        url: '/pomodoro-timer',
-        tags: ['Tool', 'Focus', 'Timer'],
-        featured: true,
-        category: 'utility',
-        section: 'daily-essentials' // Moved to Daily Essentials as it fits better there
-    },
+
+    // --- Content / Blogs ---
     {
         id: 'recipe-blog',
         title: 'Commercial Recipes for Owners',
