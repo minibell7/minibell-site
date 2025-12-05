@@ -270,6 +270,16 @@ export const projects: Project[] = [
         section: 'featured-app'
     },
     {
+        id: 'soul-animal',
+        title: 'Soul Animal',
+        description: 'My 3rd PWA creation. A mystical personality test to discover your true Spirit Animal. Featuring 16 unique archetypes and beautiful AI-generated imagery.',
+        url: 'https://soulanimal.mini-bell.com/',
+        tags: ['PWA', 'Fun', 'Mystical'],
+        featured: true,
+        category: 'app',
+        section: 'featured-app'
+    },
+    {
         id: 'pet-bti',
         title: 'Pet BTI',
         description: 'My first "Vibe Coding" project as a non-developer. Built with AI to prove that ideas can become reality. This project turned my doubt into confidence and started my journey.',
