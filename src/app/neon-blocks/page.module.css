@@ -220,40 +220,6 @@
         padding: 0.5rem;
     }
 
-    .desktopControls {
-        display: none;
-    }
-
-    .mobileControls {
-        display: grid;
-        position: fixed;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90vw;
-        max-width: 400px;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        z-index: 99999;
-        background: rgba(0, 0, 0, 0.95);
-        padding: 1.5rem;
-        border-radius: 16px;
-        border: 2px solid var(--accent-primary);
-        box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
-        backdrop-filter: blur(10px);
-    }
-
-    .controlBtn {
-        padding: 1.5rem;
-        font-size: 2rem;
-        background: rgba(255, 255, 255, 0.15);
-    }
-
-    .controlBtn:active {
-        background: var(--accent-primary);
-        transform: scale(0.95);
-    }
-
     .board {
         grid-template-rows: repeat(20, 25px);
         grid-template-columns: repeat(10, 25px);
