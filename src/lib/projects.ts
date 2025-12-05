@@ -6,98 +6,72 @@ export interface Project {
     tags: string[];
     featured: boolean;
     category: 'app' | 'utility' | 'content' | 'game';
+    section?: 'finance-health' | 'daily-essentials' | 'creator-tools' | 'fun-arcade';
 }
 
 export const projects: Project[] = [
+    // --- Section 1: Finance & Health ---
     {
-        id: 'pet-bti',
-        title: 'Pet BTI',
-        description: 'My first "Vibe Coding" project as a non-developer. Built with AI to prove that ideas can become reality. This project turned my doubt into confidence and started my journey.',
-        url: 'https://pet-bti.mini-bell.com/',
-        tags: ['PWA', 'Next.js', 'Interactive'],
+        id: 'loan-calculator',
+        title: 'Loan Calculator',
+        description: 'Estimate monthly payments and total interest.',
+        url: '/loan-calculator',
+        tags: ['Tool', 'Finance', 'Calc'],
         featured: true,
-        category: 'app'
+        category: 'utility',
+        section: 'finance-health'
+    },
+    {
+        id: 'salary-converter',
+        title: 'Salary Converter',
+        description: 'Convert hourly wages to yearly salary instantly.',
+        url: '/salary-converter',
+        tags: ['Tool', 'Finance', 'Income'],
+        featured: true,
+        category: 'utility',
+        section: 'finance-health'
+    },
+    {
+        id: 'tip-calculator',
+        title: 'Tip Calculator',
+        description: 'Calculate gratuity and split bills instantly.',
+        url: '/tip-calculator',
+        tags: ['Tool', 'Finance', 'Calc'],
+        featured: true,
+        category: 'utility',
+        section: 'finance-health'
+    },
+    {
+        id: 'bmi-calculator',
+        title: 'BMI Calculator',
+        description: 'Check your Body Mass Index and health category.',
+        url: '/bmi-calculator',
+        tags: ['Tool', 'Health', 'Fitness'],
+        featured: true,
+        category: 'utility',
+        section: 'finance-health'
     },
     {
         id: 'dreamflow',
         title: 'zombiecheck',
-        description: 'Find forgotten "zombie" subscriptions that silently drain your wallet. 100% Local & Private - no bank connection required. Compare your memory vs actual bills to spot hidden costs. Born from a real experience of paying for a closed shop\'s insurance for 1.5 years!',
+        description: 'Find forgotten "zombie" subscriptions. 100% Local & Private.',
         url: 'https://zombiecheck.mini-bell.com/',
         tags: ['PWA', 'Finance', 'Privacy'],
         featured: true,
-        category: 'app'
+        category: 'app',
+        section: 'finance-health'
     },
-    // {
-    //     id: 'qr-menu',
-    //     title: 'QR Menu Maker',
-    //     description: 'Created by a restaurant owner to help fellow business owners. Build digital menus easily. Continuous updates and advanced features planned.',
-    //     url: 'https://qrmenu.mini-bell.com',
-    //     tags: ['PWA', 'Utility', 'QR Code'],
-    //     featured: true,
-    //     category: 'app'
-    // },
+
+    // --- Section 2: Daily Essentials ---
     {
-        id: 'qr-creator',
-        title: 'QR Code Generator',
-        description: 'Generate and download QR codes instantly by entering a URL.',
-        url: '/qr-generator',
-        tags: ['Tool', 'Utility', 'QR Code'],
+        id: 'password-generator',
+        title: 'Password Generator',
+        description: 'Generate strong, secure, and random passwords.',
+        url: '/password-generator',
+        tags: ['Tool', 'Security', 'Privacy'],
         featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'favicon-generator',
-        title: 'Favicon Generator',
-        description: 'Upload an image to generate favicons (PNG) in various sizes.',
-        url: '/favicon-generator',
-        tags: ['Tool', 'Image', 'Utility'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'youtube-thumbnail',
-        title: 'YouTube Thumbnail Downloader',
-        description: 'Extract and download high-quality thumbnails from YouTube videos.',
-        url: '/youtube-thumbnail',
-        tags: ['Tool', 'YouTube', 'Image'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'image-converter',
-        title: 'WebP Image Converter',
-        description: 'Convert images to WebP to optimize website performance.',
-        url: '/image-converter',
-        tags: ['Tool', 'Image', 'Performance'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'character-counter',
-        title: 'Character Counter',
-        description: 'Calculate character, word, and line counts in real-time.',
-        url: '/character-counter',
-        tags: ['Tool', 'Text', 'Writing'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'd-day-calculator',
-        title: 'D-Day Calculator',
-        description: 'Calculate days remaining or passed since a special date.',
-        url: '/d-day-calculator',
-        tags: ['Tool', 'Date', 'Anniversary'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'percentage-calculator',
-        title: 'Percentage Calculator',
-        description: 'Calculate discounts, ratios, and percentage changes.',
-        url: '/percentage-calculator',
-        tags: ['Tool', 'Math', 'Calc'],
-        featured: true,
-        category: 'utility'
+        category: 'utility',
+        section: 'daily-essentials'
     },
     {
         id: 'unit-converter',
@@ -106,17 +80,103 @@ export const projects: Project[] = [
         url: '/unit-converter',
         tags: ['Tool', 'Unit', 'Convert'],
         featured: true,
-        category: 'utility'
+        category: 'utility',
+        section: 'daily-essentials'
     },
     {
-        id: 'pomodoro-timer',
-        title: 'Pomodoro Timer',
-        description: 'Boost productivity with 25m work / 5m break timer.',
-        url: '/pomodoro-timer',
-        tags: ['Tool', 'Focus', 'Timer'],
+        id: 'percentage-calculator',
+        title: 'Percentage Calculator',
+        description: 'Calculate discounts, ratios, and percentage changes.',
+        url: '/percentage-calculator',
+        tags: ['Tool', 'Math', 'Calc'],
         featured: true,
-        category: 'utility'
+        category: 'utility',
+        section: 'daily-essentials'
     },
+    {
+        id: 'character-counter',
+        title: 'Character Counter',
+        description: 'Calculate character, word, and line counts in real-time.',
+        url: '/character-counter',
+        tags: ['Tool', 'Text', 'Writing'],
+        featured: true,
+        category: 'utility',
+        section: 'daily-essentials'
+    },
+    {
+        id: 'd-day-calculator',
+        title: 'D-Day Calculator',
+        description: 'Calculate days remaining or passed since a special date.',
+        url: '/d-day-calculator',
+        tags: ['Tool', 'Date', 'Anniversary'],
+        featured: true,
+        category: 'utility',
+        section: 'daily-essentials'
+    },
+
+    // --- Section 3: Creator Tools ---
+    {
+        id: 'qr-creator',
+        title: 'QR Code Generator',
+        description: 'Generate and download QR codes instantly.',
+        url: '/qr-generator',
+        tags: ['Tool', 'Utility', 'QR Code'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+    {
+        id: 'lorem-ipsum',
+        title: 'Lorem Ipsum Generator',
+        description: 'Generate standard dummy text for design projects.',
+        url: '/lorem-ipsum',
+        tags: ['Tool', 'Design', 'Text'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+    {
+        id: 'youtube-thumbnail',
+        title: 'YouTube Thumbnail Downloader',
+        description: 'Extract high-quality thumbnails from YouTube videos.',
+        url: '/youtube-thumbnail',
+        tags: ['Tool', 'YouTube', 'Image'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+    {
+        id: 'favicon-generator',
+        title: 'Favicon Generator',
+        description: 'Generate favicons (PNG) in various sizes.',
+        url: '/favicon-generator',
+        tags: ['Tool', 'Image', 'Utility'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+    {
+        id: 'image-converter',
+        title: 'WebP Image Converter',
+        description: 'Convert images to WebP for better performance.',
+        url: '/image-converter',
+        tags: ['Tool', 'Image', 'Performance'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+    {
+        id: 'og-generator',
+        title: 'Open Graph Generator',
+        description: 'Generate meta tags and preview cards for social media.',
+        url: '/og-generator',
+        tags: ['Tool', 'SEO', 'Social'],
+        featured: true,
+        category: 'utility',
+        section: 'creator-tools'
+    },
+
+    // --- Section 4: Fun & Arcade ---
     {
         id: 'powerball',
         title: 'US Powerball',
@@ -124,7 +184,8 @@ export const projects: Project[] = [
         url: '/powerball',
         tags: ['Lotto', 'USA', 'Powerball'],
         featured: true,
-        category: 'utility'
+        category: 'utility',
+        section: 'fun-arcade'
     },
     {
         id: 'mega-millions',
@@ -133,7 +194,8 @@ export const projects: Project[] = [
         url: '/mega-millions',
         tags: ['Lotto', 'USA', 'Mega Millions'],
         featured: true,
-        category: 'utility'
+        category: 'utility',
+        section: 'fun-arcade'
     },
     {
         id: 'euromillions',
@@ -142,34 +204,8 @@ export const projects: Project[] = [
         url: '/euromillions',
         tags: ['Lotto', 'Europe', 'EuroMillions'],
         featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'fortune-cookie',
-        title: 'Digital Fortune Cookie',
-        description: 'Crack open a cookie to reveal your daily fortune.',
-        url: '/fortune-cookie',
-        tags: ['Fun', 'Fortune', 'Daily'],
-        featured: true,
-        category: 'utility'
-    },
-    {
-        id: 'neon-blocks',
-        title: 'Neon Blocks',
-        description: 'Cyberpunk style block puzzle game. Stack and clear lines!',
-        url: '/neon-blocks',
-        tags: ['Game', 'Puzzle', 'Neon'],
-        featured: true,
-        category: 'game'
-    },
-    {
-        id: 'neon-minesweeper',
-        title: 'Neon Minesweeper',
-        description: 'Classic puzzle game with a Cyberpunk Neon aesthetic.',
-        url: '/neon-minesweeper',
-        tags: ['Game', 'Puzzle', 'Neon'],
-        featured: true,
-        category: 'game'
+        category: 'utility',
+        section: 'fun-arcade'
     },
     {
         id: 'zodiac-calculator',
@@ -178,16 +214,58 @@ export const projects: Project[] = [
         url: '/zodiac-calculator',
         tags: ['Fun', 'Zodiac', 'Astrology'],
         featured: true,
-        category: 'utility'
+        category: 'utility',
+        section: 'fun-arcade'
     },
     {
-        id: 'og-generator',
-        title: 'Open Graph Generator',
-        description: 'Generate meta tags and preview cards for social media sharing.',
-        url: '/og-generator',
-        tags: ['Tool', 'SEO', 'Social'],
+        id: 'fortune-cookie',
+        title: 'Digital Fortune Cookie',
+        description: 'Crack open a cookie to reveal your daily fortune.',
+        url: '/fortune-cookie',
+        tags: ['Fun', 'Fortune', 'Daily'],
         featured: true,
-        category: 'utility'
+        category: 'utility',
+        section: 'fun-arcade'
+    },
+    {
+        id: 'neon-blocks',
+        title: 'Neon Blocks',
+        description: 'Cyberpunk style block puzzle game.',
+        url: '/neon-blocks',
+        tags: ['Game', 'Puzzle', 'Neon'],
+        featured: true,
+        category: 'game',
+        section: 'fun-arcade'
+    },
+    {
+        id: 'neon-minesweeper',
+        title: 'Neon Minesweeper',
+        description: 'Classic puzzle game with a Cyberpunk Neon aesthetic.',
+        url: '/neon-minesweeper',
+        tags: ['Game', 'Puzzle', 'Neon'],
+        featured: true,
+        category: 'game',
+        section: 'fun-arcade'
+    },
+    {
+        id: 'pet-bti',
+        title: 'Pet BTI',
+        description: 'Analyze your pet\'s personality type with AI.',
+        url: 'https://pet-bti.mini-bell.com/',
+        tags: ['PWA', 'Fun', 'AI'],
+        featured: true,
+        category: 'app',
+        section: 'fun-arcade'
+    },
+    {
+        id: 'pomodoro-timer',
+        title: 'Pomodoro Timer',
+        description: 'Boost productivity with 25m work / 5m break timer.',
+        url: '/pomodoro-timer',
+        tags: ['Tool', 'Focus', 'Timer'],
+        featured: true,
+        category: 'utility',
+        section: 'daily-essentials' // Moved to Daily Essentials as it fits better there
     },
     {
         id: 'recipe-blog',

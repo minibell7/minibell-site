@@ -24,25 +24,45 @@ export default function ImageConverterPage() {
             <ConverterClient />
 
             <section className={styles.seoSection}>
-                <h2>Why use WebP?</h2>
+                <h2>Why Convert Images to WebP?</h2>
                 <p>
-                    WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.
+                    In the world of web performance, every kilobyte counts. Large image files are the #1 culprit for slow-loading websites, which frustrates users and hurts SEO rankings. <strong>WebP</strong> is a modern image format developed by Google that solves this problem. It provides superior compression compared to older formats like JPEG and PNG, without significantly sacrificing quality.
+                </p>
+                <p>
+                    Our <strong>WebP Image Converter</strong> allows you to easily transform your existing images into this optimized format, helping your website load faster and score higher on Core Web Vitals.
                 </p>
 
-                <h2>How to convert to WebP</h2>
+                <h2>Benefits of WebP</h2>
+                <ul>
+                    <li><strong>Smaller File Sizes:</strong> WebP images are typically 25-34% smaller than comparable JPEG and PNG files. This means faster downloads and less data usage for your visitors.</li>
+                    <li><strong>High Quality:</strong> WebP supports both lossy and lossless compression, as well as transparency (alpha channel), making it a versatile replacement for both JPG and PNG.</li>
+                    <li><strong>SEO Boost:</strong> Google explicitly favors fast-loading sites. Using next-gen formats like WebP is a recommended practice in PageSpeed Insights.</li>
+                    <li><strong>Broad Support:</strong> All modern browsers (Chrome, Firefox, Edge, Safari) fully support WebP.</li>
+                </ul>
+
+                <h2>How to Use This Tool</h2>
                 <ol>
-                    <li>Click the upload box to select your JPG or PNG image.</li>
-                    <li>The tool will automatically convert it to WebP format.</li>
-                    <li>Check the file size reduction.</li>
-                    <li>Click "Download WebP" to save the optimized image.</li>
+                    <li><strong>Select Image:</strong> Click the upload area to choose a JPG or PNG file from your device.</li>
+                    <li><strong>Automatic Conversion:</strong> The tool instantly processes the image in your browser.</li>
+                    <li><strong>Compare:</strong> See the original file size vs. the new WebP file size to appreciate the savings.</li>
+                    <li><strong>Download:</strong> Click the button to save your optimized WebP image.</li>
                 </ol>
 
-                <h2>Benefits</h2>
-                <ul>
-                    <li><strong>Smaller File Size:</strong> WebP images are 26% smaller than PNGs.</li>
-                    <li><strong>Faster Loading:</strong> Improve your Core Web Vitals and SEO score.</li>
-                    <li><strong>Privacy Safe:</strong> All conversion happens in your browser.</li>
-                </ul>
+                <h2>FAQ</h2>
+                <div className={styles.faqList}>
+                    <div className={styles.faqItem}>
+                        <h3>Q. Will I lose image quality?</h3>
+                        <p>A. WebP is designed to minimize quality loss. For most web uses, the difference is visually indistinguishable, while the file size savings are significant.</p>
+                    </div>
+                    <div className={styles.faqItem}>
+                        <h3>Q. Is my data safe?</h3>
+                        <p>A. Yes. This converter runs entirely in your browser using client-side technology. Your photos are never uploaded to our servers, ensuring complete privacy.</p>
+                    </div>
+                    <div className={styles.faqItem}>
+                        <h3>Q. Can I convert WebP back to JPG?</h3>
+                        <p>A. While this tool focuses on creating WebP files, many image viewers and editors now support opening and saving WebP files as other formats if needed.</p>
+                    </div>
+                </div>
             </section>
         </div>
     );

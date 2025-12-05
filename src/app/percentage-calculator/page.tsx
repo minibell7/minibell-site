@@ -24,34 +24,54 @@ export default function PercentagePage() {
             <PercentageClient />
 
             <section className={styles.seoSection}>
-                <h2>Common Uses</h2>
+                <h2>Why Use a Percentage Calculator?</h2>
+                <p>
+                    Percentages are everywhere in our daily lives, from shopping discounts and restaurant tips to tax calculations and stock market changes. While the math itself isn't impossible, it can be tricky to do in your head quickly and accurately. A <strong>Percentage Calculator</strong> is an essential tool that saves you time and prevents costly mistakes.
+                </p>
+                <p>
+                    Whether you're a student checking homework, a shopper trying to figure out the final price of a sale item, or a business owner analyzing profit margins, our tool provides instant, accurate results for all common percentage scenarios.
+                </p>
+
+                <h2>Understanding the Three Modes</h2>
+                <p>Our calculator offers three distinct modes to handle different types of questions:</p>
                 <ul>
-                    <li><strong>Discounts:</strong> Calculate how much you save during a sale (e.g., 20% off $50).</li>
-                    <li><strong>Tips:</strong> Calculate the tip amount for a restaurant bill.</li>
-                    <li><strong>Growth:</strong> Measure the percentage increase in sales or traffic.</li>
-                    <li><strong>Proportions:</strong> Find out what percentage one number is of another.</li>
+                    <li>
+                        <strong>Percentage of a Number:</strong>
+                        <br /><em>"What is 20% of 150?"</em>
+                        <br />This is useful for calculating tips (e.g., 15% of the bill) or taxes. The formula is simply: <code>(Percentage / 100) × Total Value</code>.
+                    </li>
+                    <li>
+                        <strong>Percentage Change (Increase/Decrease):</strong>
+                        <br /><em>"The price went from $50 to $40. What is the % change?"</em>
+                        <br />This is crucial for tracking growth or loss. A negative result indicates a decrease (discount), while a positive result indicates an increase. The formula is: <code>((New - Old) / Old) × 100</code>.
+                    </li>
+                    <li>
+                        <strong>Percentage Ratio:</strong>
+                        <br /><em>"25 is what percent of 100?"</em>
+                        <br />This helps you understand proportions, like what score you got on a test. The formula is: <code>(Part / Total) × 100</code>.
+                    </li>
                 </ul>
 
-                <h2>Formulas</h2>
+                <h2>Real-Life Examples</h2>
                 <ul>
-                    <li><strong>Percentage Value:</strong> (Percentage / 100) × Total Value</li>
-                    <li><strong>Percentage Ratio:</strong> (Part / Total) × 100</li>
-                    <li><strong>Percentage Change:</strong> ((New Value - Old Value) / Old Value) × 100</li>
+                    <li><strong>Shopping:</strong> A $200 jacket is 30% off. Use "Percentage of a Number" to find the discount amount ($60) and the final price ($140).</li>
+                    <li><strong>Investing:</strong> You bought a stock at $100 and it's now $120. Use "Percentage Change" to see that you made a 20% profit.</li>
+                    <li><strong>Health:</strong> You want to lose 5% of your body weight. Calculate exactly how many kilograms or pounds that is.</li>
                 </ul>
 
                 <h2>FAQ</h2>
                 <div className={styles.faqList}>
                     <div className={styles.faqItem}>
-                        <h3>Q. How do I calculate a 20% discount?</h3>
-                        <p>A. To calculate a 20% discount, multiply the original price by 0.20. For example, 20% of $100 is $20. The final price would be $80.</p>
+                        <h3>Q. How do I calculate a discount manually?</h3>
+                        <p>A. To calculate a discount, convert the percentage to a decimal (e.g., 20% = 0.20) and multiply it by the original price. Subtract this amount from the original price to get the final cost.</p>
                     </div>
                     <div className={styles.faqItem}>
-                        <h3>Q. What is the formula for percentage change?</h3>
-                        <p>A. The formula is: ((New Value - Old Value) / Old Value) × 100. This tells you how much a number has grown or shrunk in percentage terms.</p>
+                        <h3>Q. What is the difference between percentage change and percentage point change?</h3>
+                        <p>A. Percentage change measures the relative difference between two numbers. Percentage point change is the absolute difference between two percentages. For example, moving from 10% to 12% is a 20% increase (relative), but a 2 percentage point increase (absolute).</p>
                     </div>
                     <div className={styles.faqItem}>
-                        <h3>Q. Can I calculate percentage increase and decrease?</h3>
-                        <p>A. Yes, use the "Percentage Change" mode. If the result is positive, it's an increase. If negative, it's a decrease.</p>
+                        <h3>Q. Is this calculator accurate for financial use?</h3>
+                        <p>A. Yes, it uses standard mathematical formulas. However, for complex financial reporting involving compound interest or specific tax laws, we recommend specialized financial software.</p>
                     </div>
                 </div>
             </section>

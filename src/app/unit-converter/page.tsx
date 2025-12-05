@@ -24,34 +24,55 @@ export default function UnitConverterPage() {
             <UnitClient />
 
             <section className={styles.seoSection}>
-                <h2>Supported Units</h2>
+                <h2>Why Use a Unit Converter?</h2>
+                <p>
+                    In a globalized world, we constantly encounter different systems of measurement. You might be following a recipe that uses grams while your scale uses ounces, or checking the weather in a country that uses Celsius when you're used to Fahrenheit. A <strong>Unit Converter</strong> bridges this gap, allowing you to instantly translate measurements into terms you understand.
+                </p>
+                <p>
+                    Our tool is designed to be a comprehensive solution for everyday conversions. Whether you are a student, a traveler, a cook, or a professional, having a reliable converter at your fingertips saves time and prevents confusion.
+                </p>
+
+                <h2>Supported Conversion Categories</h2>
                 <ul>
-                    <li><strong>Length:</strong> Meter, Centimeter, Inch, Foot, Yard, Kilometer, Mile</li>
-                    <li><strong>Weight:</strong> Kilogram, Gram, Pound, Ounce</li>
-                    <li><strong>Area:</strong> Square Meter, Pyeong (KR), Square Foot, Acre</li>
-                    <li><strong>Temperature:</strong> Celsius, Fahrenheit, Kelvin</li>
+                    <li>
+                        <strong>Length & Distance:</strong> Convert between Metric (meters, kilometers) and Imperial (feet, inches, miles). Perfect for understanding height, travel distances, or screen sizes.
+                    </li>
+                    <li>
+                        <strong>Weight & Mass:</strong> Switch between kilograms/grams and pounds/ounces. Essential for cooking, shipping, and tracking body weight.
+                    </li>
+                    <li>
+                        <strong>Area:</strong> Convert square meters to square feet, acres, or even "Pyeong" (a traditional Korean unit). Useful for real estate and land measurement.
+                    </li>
+                    <li>
+                        <strong>Temperature:</strong> Instantly convert Celsius to Fahrenheit or Kelvin. Crucial for travel planning, science class, and cooking.
+                    </li>
                 </ul>
 
-                <h2>Popular Conversions</h2>
+                <h2>Understanding "Pyeong" (평)</h2>
+                <p>
+                    One unique feature of our converter is the inclusion of the <strong>Pyeong</strong>. This unit is widely used in South Korea for measuring apartment and house sizes.
+                </p>
                 <ul>
-                    <li><strong>Pyeong to m²:</strong> Essential for Korean real estate. 1 Pyeong ≈ 3.3 m².</li>
-                    <li><strong>Inch to cm:</strong> Useful for screen sizes and clothing. 1 Inch = 2.54 cm.</li>
-                    <li><strong>Kg to Lb:</strong> Common for body weight. 1 Kg ≈ 2.2 lbs.</li>
+                    <li><strong>1 Pyeong ≈ 3.3058 m²</strong></li>
+                    <li><strong>1 Pyeong ≈ 35.58 ft²</strong></li>
                 </ul>
+                <p>
+                    If you are looking at Korean real estate listings, knowing how to convert Pyeong to square meters is essential for understanding the actual size of a property.
+                </p>
 
                 <h2>FAQ</h2>
                 <div className={styles.faqList}>
                     <div className={styles.faqItem}>
-                        <h3>Q. How many square meters is 1 Pyeong?</h3>
-                        <p>A. 1 Pyeong is approximately 3.3058 square meters. It is a traditional unit of area used in Korea, mainly for real estate.</p>
+                        <h3>Q. Why are there different measurement systems?</h3>
+                        <p>A. Historically, different regions developed their own systems. The Metric system (International System of Units) is the global standard, but the Imperial system persists in the US and a few other places due to tradition and industrial inertia.</p>
                     </div>
                     <div className={styles.faqItem}>
-                        <h3>Q. What is the difference between Celsius and Fahrenheit?</h3>
-                        <p>A. Celsius is used in most of the world, while Fahrenheit is used in the US. Water freezes at 0°C (32°F) and boils at 100°C (212°F).</p>
+                        <h3>Q. Is 0°C the same as 0°F?</h3>
+                        <p>A. No. 0°C is the freezing point of water, which equals 32°F. 0°F is much colder, approximately -17.78°C. This is why temperature conversion is not as simple as multiplying by a factor; it requires an offset.</p>
                     </div>
                     <div className={styles.faqItem}>
-                        <h3>Q. Is this unit converter free?</h3>
-                        <p>A. Yes, this tool is 100% free and works entirely in your browser without downloading any software.</p>
+                        <h3>Q. How accurate are these conversions?</h3>
+                        <p>A. Our tool uses precise mathematical conversion factors (e.g., 1 inch = 2.54 cm exactly). Results are rounded to a reasonable number of decimal places for readability, but they are highly accurate for all practical purposes.</p>
                     </div>
                 </div>
             </section>

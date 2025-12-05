@@ -28,14 +28,11 @@ const TypingText = ({ text }: { text: string }) => {
 export default function Home() {
   const allProjects = getFeaturedProjects();
 
-  // Define Categories
-  const dailyToolsIds = ['percentage-calculator', 'unit-converter', 'd-day-calculator', 'character-counter'];
-  const creatorToolsIds = ['youtube-thumbnail', 'qr-creator', 'image-converter', 'favicon-generator', 'og-generator'];
-  const funLuckIds = ['pomodoro-timer', 'zodiac-calculator', 'fortune-cookie', 'powerball', 'mega-millions', 'euromillions'];
-
-  const dailyTools = allProjects.filter(p => dailyToolsIds.includes(p.id));
-  const creatorTools = allProjects.filter(p => creatorToolsIds.includes(p.id));
-  const funLuckTools = allProjects.filter(p => funLuckIds.includes(p.id));
+  // Filter projects by section
+  const financeHealthTools = allProjects.filter(p => p.section === 'finance-health');
+  const dailyEssentialsTools = allProjects.filter(p => p.section === 'daily-essentials');
+  const creatorTools = allProjects.filter(p => p.section === 'creator-tools');
+  const funArcadeTools = allProjects.filter(p => p.section === 'fun-arcade');
 
   // Helper for compact list item (Mobile)
   const CompactItem = ({ project }: { project: any }) => (
@@ -61,7 +58,9 @@ export default function Home() {
                         project.tags.includes('Unit') ? '⚖️' :
                           project.tags.includes('Focus') ? '🍅' :
                             project.tags.includes('Fortune') ? '🥠' :
-                              project.tags.includes('Zodiac') ? '🐉' : '🛠️'}
+                              project.tags.includes('Zodiac') ? '🐉' :
+                                project.tags.includes('Finance') ? '💰' :
+                                  project.tags.includes('Health') ? '💪' : '🛠️'}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
           <span style={{ fontWeight: '700', fontSize: '1rem' }}>{project.title}</span>
@@ -93,89 +92,74 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Daily Tools Section */}
+      {/* Section 1: Finance & Health */}
       <section className={styles.section} style={{ animationDelay: '0.2s' }}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Daily Tools</h2>
-          <p className={styles.sectionDesc}>Essential calculators and converters for everyday use</p>
+          <h2 className={styles.sectionTitle}>Finance & Health</h2>
+          <p className={styles.sectionDesc}>Smart tools for your money and well-being</p>
         </div>
-        {/* PC Grid */}
         <div className={`${styles.grid} ${styles.utilityGrid}`}>
-          {dailyTools.map((project) => (
+          {financeHealthTools.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-        {/* Mobile List */}
         <div className={`${styles.compactList} ${styles.utilityList}`}>
-          {dailyTools.map((project) => (
+          {financeHealthTools.map((project) => (
             <CompactItem key={project.id} project={project} />
           ))}
         </div>
       </section>
 
-      {/* Creator Tools Section */}
+      {/* Section 2: Daily Essentials */}
       <section className={styles.section} style={{ animationDelay: '0.4s' }}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Creator Tools</h2>
-          <p className={styles.sectionDesc}>Utilities for content creators and developers</p>
+          <h2 className={styles.sectionTitle}>Daily Essentials</h2>
+          <p className={styles.sectionDesc}>Must-have utilities for everyday tasks</p>
         </div>
         <div className={`${styles.grid} ${styles.utilityGrid}`}>
-          {creatorTools.map((project) => (
+          {dailyEssentialsTools.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
         <div className={`${styles.compactList} ${styles.utilityList}`}>
-          {creatorTools.map((project) => (
+          {dailyEssentialsTools.map((project) => (
             <CompactItem key={project.id} project={project} />
           ))}
         </div>
       </section>
 
-      {/* Fun & Luck Section */}
+      {/* Section 3: Creator Tools */}
       <section className={styles.section} style={{ animationDelay: '0.6s' }}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Fun & Luck</h2>
-          <p className={styles.sectionDesc}>Test your luck and have some fun</p>
+          <h2 className={styles.sectionTitle}>Creator Tools</h2>
+          <p className={styles.sectionDesc}>Boost your content creation workflow</p>
         </div>
         <div className={`${styles.grid} ${styles.utilityGrid}`}>
-          {funLuckTools.map((project) => (
+          {creatorTools.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
         <div className={`${styles.compactList} ${styles.utilityList}`}>
-          {funLuckTools.map((project) => (
+          {creatorTools.map((project) => (
             <CompactItem key={project.id} project={project} />
           ))}
         </div>
       </section>
 
-      {/* Games Section */}
-      <section className={styles.section} style={{ animationDelay: '0.7s' }}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Neon Arcade</h2>
-          <p className={styles.sectionDesc}>Cyberpunk style retro games</p>
-        </div>
-        <div className={`${styles.grid} ${styles.utilityGrid}`}>
-          {allProjects.filter(p => p.category === 'game').map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-        <div className={`${styles.compactList} ${styles.utilityList}`}>
-          {allProjects.filter(p => p.category === 'game').map((project) => (
-            <CompactItem key={project.id} project={project} />
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Apps Section (Restored) */}
+      {/* Section 4: Fun & Arcade */}
       <section className={styles.section} style={{ animationDelay: '0.8s' }}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Featured Apps</h2>
-          <p className={styles.sectionDesc}>Special services built with AI</p>
+          <h2 className={styles.sectionTitle}>Fun & Arcade</h2>
+          <p className={styles.sectionDesc}>Games, luck, and personality tests</p>
         </div>
-        <div className={styles.grid}>
-          {allProjects.filter(p => p.category === 'app').map((project) => (
+        <div className={`${styles.grid} ${styles.utilityGrid}`}>
+          {funArcadeTools.map((project) => (
             <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+        <div className={`${styles.compactList} ${styles.utilityList}`}>
+          {funArcadeTools.map((project) => (
+            <CompactItem key={project.id} project={project} />
           ))}
         </div>
       </section>
