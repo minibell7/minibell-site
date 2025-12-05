@@ -216,20 +216,27 @@
 
     .controls {
         position: fixed;
-        bottom: 20px;
+        bottom: 40px;
+        /* Increased from 20px to avoid bottom bars */
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 90vw;
+        /* Use vw units */
         max-width: 400px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
-        z-index: 100;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 1rem;
+        z-index: 9999;
+        /* Force on top */
+        background: rgba(0, 0, 0, 0.95);
+        /* More opaque */
+        padding: 1.5rem;
+        /* Larger touch area */
         border-radius: 16px;
-        border: 1px solid var(--accent-primary);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        border: 2px solid var(--accent-primary);
+        /* Thicker border */
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
     }
 
     .controlBtn {
