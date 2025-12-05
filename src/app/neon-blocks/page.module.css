@@ -141,11 +141,15 @@
     background: transparent;
 }
 
-.controls {
+.desktopControls {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
     margin-top: 1rem;
+}
+
+.mobileControls {
+    display: none;
 }
 
 .controlBtn {
@@ -157,6 +161,8 @@
     font-size: 1.5rem;
     cursor: pointer;
     touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .controlBtn:active {
@@ -214,28 +220,26 @@
         padding: 0.5rem;
     }
 
-    .controls {
+    .desktopControls {
+        display: none;
+    }
+
+    .mobileControls {
+        display: grid;
         position: fixed;
-        bottom: 40px;
-        /* Increased from 20px to avoid bottom bars */
+        bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
         width: 90vw;
-        /* Use vw units */
         max-width: 400px;
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
-        z-index: 9999;
-        /* Force on top */
+        z-index: 99999;
         background: rgba(0, 0, 0, 0.95);
-        /* More opaque */
         padding: 1.5rem;
-        /* Larger touch area */
         border-radius: 16px;
         border: 2px solid var(--accent-primary);
-        /* Thicker border */
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
         backdrop-filter: blur(10px);
     }
 

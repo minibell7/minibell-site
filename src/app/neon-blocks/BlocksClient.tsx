@@ -226,14 +226,22 @@ export default function BlocksClient() {
                         </button>
                     )}
 
-                    {/* Mobile Controls */}
-                    <div className={styles.controls}>
+                    {/* Desktop Controls */}
+                    <div className={styles.desktopControls}>
                         <button className={styles.controlBtn} onClick={() => move(-1)}>←</button>
                         <button className={styles.controlBtn} onClick={rotatePiece}>↻</button>
                         <button className={styles.controlBtn} onClick={() => move(1)}>→</button>
                         <button className={styles.controlBtn} style={{ gridColumn: '1/-1' }} onClick={drop}>↓</button>
                     </div>
                 </div>
+            </div>
+
+            {/* Mobile Controls - Fixed Position */}
+            <div className={styles.mobileControls}>
+                <button className={styles.controlBtn} onClick={() => move(-1)}>←</button>
+                <button className={styles.controlBtn} onClick={rotatePiece}>↻</button>
+                <button className={styles.controlBtn} onClick={() => move(1)}>→</button>
+                <button className={styles.controlBtn} style={{ gridColumn: '1/-1' }} onClick={drop}>↓</button>
             </div>
 
             {gameOver && (
