@@ -10,6 +10,9 @@ export default function Footer() {
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', opacity: 0.7 }}>
                     Designed with ❤️ for creators
                 </p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>
+                    Contact: tjdudaud@gmail.com
+                </p>
             </div>
         </footer>
     );
