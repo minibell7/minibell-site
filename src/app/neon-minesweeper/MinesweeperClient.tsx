@@ -120,6 +120,16 @@ export default function MinesweeperClient() {
                     ))}
                 </div>
             </div>
+            {gameState === 'won' && (
+                <div className={styles.victoryOverlay}>
+                    <h2 className={styles.victoryTitle}>Mission Cleared!</h2>
+                    <span className={styles.victoryEmoji}>💐</span>
+                    <p style={{ color: '#fff', marginBottom: '1rem' }}>Time: {timer}s</p>
+                    <button className={styles.restartBtn} onClick={() => initGame(difficulty)}>
+                        Play Again
+                    </button>
+                </div>
+            )}
         </div>
     );
 }
