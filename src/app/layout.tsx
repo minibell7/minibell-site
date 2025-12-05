@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import ThemeToggle from "@/components/ThemeToggle";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
+import Script from "next/script";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -31,6 +32,21 @@ export default function RootLayout({
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2875879574828967" crossOrigin="anonymous"></script>
       </head>
       <body className={outfit.className}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RHB18CY2VT"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-RHB18CY2VT');
+          `}
+        </Script>
+
         <div className="background-gradient" />
         <div className="background-noise" />
         <ThemeProvider>
