@@ -71,9 +71,14 @@ export default function BlocksClient() {
             const { newBoard: clearedBoard, linesCleared } = clearLines(newBoard);
 
             if (linesCleared > 0) {
-                setScore(prev => prev + (linesCleared * 100 * level));
-                setLevel(prev => Math.floor((prev + linesCleared * 100) / 1000) + 1);
-                dropIntervalRef.current = Math.max(100, 1000 - (level * 50));
+                setScore(prevScore => {
+                    const newScore = prevScore + (linesCleared * 100 * level);
+                    // Level up every 1000 points
+                    const newLevel = Math.floor(newScore / 1000) + 1;
+                    setLevel(newLevel);
+                    dropIntervalRef.current = Math.max(100, 1000 - (newLevel * 50));
+                    return newScore;
+                });
             }
 
             setBoard(clearedBoard);
@@ -107,7 +112,12 @@ export default function BlocksClient() {
         spawnPiece();
     };
 
-    const update = (time: number) => {
+    const dropRef = useRef(drop);
+    useEffect(() => {
+        dropRef.current = drop;
+    }, [drop]);
+
+    const update = useCallback((time: number) => {
         if (!isPlaying || gameOver) return;
 
         if (!lastTimeRef.current) lastTimeRef.current = time;
@@ -116,12 +126,12 @@ export default function BlocksClient() {
 
         dropCounterRef.current += deltaTime;
         if (dropCounterRef.current > dropIntervalRef.current) {
-            drop();
+            dropRef.current();
             dropCounterRef.current = 0;
         }
 
         requestRef.current = requestAnimationFrame(update);
-    };
+    }, [isPlaying, gameOver]);
 
     useEffect(() => {
         if (isPlaying && !gameOver) {
@@ -130,7 +140,7 @@ export default function BlocksClient() {
         return () => {
             if (requestRef.current) cancelAnimationFrame(requestRef.current);
         };
-    }, [isPlaying, gameOver, drop]);
+    }, [isPlaying, gameOver, update]);
 
     // Keyboard controls
     useEffect(() => {
