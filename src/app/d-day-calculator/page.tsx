@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import DDayClient from './DDayClient';
+import FAQSection from '../../components/FAQSection';
 
 export const metadata: Metadata = {
     title: 'D-Day Calculator | Date Counter & Anniversary Checker',
@@ -53,22 +54,22 @@ export default function DDayPage() {
                 </ul>
                 <p>Our tool lets you choose the method that fits your needs with a simple checkbox.</p>
 
-                <h2>FAQ</h2>
-                <div className={styles.faqList}>
-                    <div className={styles.faqItem}>
-                        <h3>Q. What does "D-Day" mean?</h3>
-                        <p>A. Historically, D-Day referred to the start of a military operation. Today, it's widely used to refer to the due date or scheduled date of any important event. "D-7" means 7 days left, while "D+100" means 100 days have passed.</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. Can I calculate my baby's age in days?</h3>
-                        <p>A. Absolutely! Enter your baby's birth date as the target date. The "D+" number will show you exactly how many days old they are today.</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. How do I track a diet or habit streak?</h3>
-                        <p>A. Set the start date of your diet or habit. The calculator will show you your current streak in days. Seeing the number grow can be a great motivator!</p>
-                    </div>
-                </div>
             </section>
+
+            <FAQSection items={[
+                {
+                    question: "Q. What does \"D-Day\" mean?",
+                    answer: "A. Historically, D-Day referred to the start of a military operation. Today, it's widely used to refer to the due date or scheduled date of any important event. \"D-7\" means 7 days left, while \"D+100\" means 100 days have passed."
+                },
+                {
+                    question: "Q. Can I calculate my baby's age in days?",
+                    answer: "A. Absolutely! Enter your baby's birth date as the target date. The \"D+\" number will show you exactly how many days old they are today."
+                },
+                {
+                    question: "Q. How do I track a diet or habit streak?",
+                    answer: "A. Set the start date of your diet or habit. The calculator will show you your current streak in days. Seeing the number grow can be a great motivator!"
+                }
+            ]} />
         </div>
     );
 }

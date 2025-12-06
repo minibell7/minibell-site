@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import PasswordClient from './PasswordClient';
+import FAQSection from '../../components/FAQSection';
 
 export const metadata: Metadata = {
     title: 'Strong Password Generator | Secure & Random',
@@ -47,22 +48,22 @@ export default function PasswordGeneratorPage() {
                     <li><strong>Copy:</strong> Click the copy icon to save it to your clipboard.</li>
                 </ol>
 
-                <h2>FAQ</h2>
-                <div className={styles.faqList}>
-                    <div className={styles.faqItem}>
-                        <h3>Q. Is it safe to generate passwords online?</h3>
-                        <p>A. Yes, absolutely. This tool runs entirely in your browser (client-side). The passwords are generated locally on your device and are never sent to our servers. We cannot see or store them.</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. How can I remember these complex passwords?</h3>
-                        <p>A. You shouldn't try to memorize them! We highly recommend using a Password Manager (like Bitwarden, 1Password, or LastPass) to store your unique passwords securely.</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. Why are symbols important?</h3>
-                        <p>A. Adding symbols expands the set of possible characters, making "brute force" attacks (where hackers try every combination) take significantly longer.</p>
-                    </div>
-                </div>
             </section>
+
+            <FAQSection items={[
+                {
+                    question: "Q. Is it safe to generate passwords online?",
+                    answer: "A. Yes, absolutely. This tool runs entirely in your browser (client-side). The passwords are generated locally on your device and are never sent to our servers. We cannot see or store them."
+                },
+                {
+                    question: "Q. How can I remember these complex passwords?",
+                    answer: "A. You shouldn't try to memorize them! We highly recommend using a Password Manager (like Bitwarden, 1Password, or LastPass) to store your unique passwords securely."
+                },
+                {
+                    question: "Q. Why are symbols important?",
+                    answer: "A. Adding symbols expands the set of possible characters, making \"brute force\" attacks (where hackers try every combination) take significantly longer."
+                }
+            ]} />
         </div>
     );
 }

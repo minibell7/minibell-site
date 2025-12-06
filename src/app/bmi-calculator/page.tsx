@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import BMIClient from './BMIClient';
+import FAQSection from '../../components/FAQSection';
 
 export const metadata: Metadata = {
     title: 'Free BMI Calculator | Body Mass Index Checker',
@@ -48,22 +49,22 @@ export default function BMICalculatorPage() {
                     <li><strong>See Result:</strong> Your BMI score and category will appear instantly.</li>
                 </ol>
 
-                <h2>FAQ</h2>
-                <div className={styles.faqList}>
-                    <div className={styles.faqItem}>
-                        <h3>Q. Is BMI accurate for everyone?</h3>
-                        <p>A. No. BMI does not distinguish between muscle and fat. Athletes with high muscle mass may be classified as "overweight" despite having low body fat. It also may not be accurate for pregnant women or the elderly.</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. What should I do if my BMI is high?</h3>
-                        <p>A. A high BMI can be an indicator of high body fatness. If you are concerned about your weight, consult with a healthcare provider. They can perform further assessments and help you create a healthy lifestyle plan.</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. Why are there two unit systems?</h3>
-                        <p>A. The Metric system is used globally, while the Imperial system is primarily used in the United States. We provide both to ensure everyone can use our tool easily.</p>
-                    </div>
-                </div>
             </section>
+
+            <FAQSection items={[
+                {
+                    question: "Q. Is BMI accurate for everyone?",
+                    answer: "A. No. BMI does not distinguish between muscle and fat. Athletes with high muscle mass may be classified as \"overweight\" despite having low body fat. It also may not be accurate for pregnant women or the elderly."
+                },
+                {
+                    question: "Q. What should I do if my BMI is high?",
+                    answer: "A. A high BMI can be an indicator of high body fatness. If you are concerned about your weight, consult with a healthcare provider. They can perform further assessments and help you create a healthy lifestyle plan."
+                },
+                {
+                    question: "Q. Why are there two unit systems?",
+                    answer: "A. The Metric system is used globally, while the Imperial system is primarily used in the United States. We provide both to ensure everyone can use our tool easily."
+                }
+            ]} />
         </div>
     );
 }

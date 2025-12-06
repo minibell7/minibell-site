@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import LoanClient from './LoanClient';
+import FAQSection from '../../components/FAQSection';
 
 export const metadata: Metadata = {
     title: 'Free Loan Calculator | Monthly Payment & Interest',
@@ -47,22 +48,22 @@ export default function LoanCalculatorPage() {
                     <li><strong>Total Cost:</strong> Principal + Interest. This is the actual amount of money leaving your pocket.</li>
                 </ul>
 
-                <h2>FAQ</h2>
-                <div className={styles.faqList}>
-                    <div className={styles.faqItem}>
-                        <h3>Q. Does this calculator work for mortgages?</h3>
-                        <p>A. Yes, it uses the standard amortization formula used for fixed-rate mortgages, auto loans, and personal loans. However, it does not include extra costs like property taxes, insurance, or HOA fees often associated with mortgages.</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. How can I lower my monthly payment?</h3>
-                        <p>A. You can lower your payment by: 1) Borrowing less, 2) Securing a lower interest rate (improve your credit score), or 3) Extending the loan term (though this increases total interest paid).</p>
-                    </div>
-                    <div className={styles.faqItem}>
-                        <h3>Q. What is APR?</h3>
-                        <p>A. APR stands for Annual Percentage Rate. It represents the yearly cost of the loan, including interest and fees, expressed as a percentage.</p>
-                    </div>
-                </div>
             </section>
+
+            <FAQSection items={[
+                {
+                    question: "Q. Does this calculator work for mortgages?",
+                    answer: "A. Yes, it uses the standard amortization formula used for fixed-rate mortgages, auto loans, and personal loans. However, it does not include extra costs like property taxes, insurance, or HOA fees often associated with mortgages."
+                },
+                {
+                    question: "Q. How can I lower my monthly payment?",
+                    answer: "A. You can lower your payment by: 1) Borrowing less, 2) Securing a lower interest rate (improve your credit score), or 3) Extending the loan term (though this increases total interest paid)."
+                },
+                {
+                    question: "Q. What is APR?",
+                    answer: "A. APR stands for Annual Percentage Rate. It represents the yearly cost of the loan, including interest and fees, expressed as a percentage."
+                }
+            ]} />
         </div>
     );
 }
