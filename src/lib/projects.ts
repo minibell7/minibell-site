@@ -260,6 +260,16 @@ export const projects: Project[] = [
 
     // --- Section 5: Featured Apps (Personal Projects) ---
     {
+        id: 'flirting-vibe',
+        title: 'Flirting Vibe',
+        description: 'Analyze your flirting style with this fun PWA.',
+        url: 'https://flirtingvibe.mini-bell.com',
+        tags: ['PWA', 'Fun', 'Test'],
+        featured: true,
+        category: 'app',
+        section: 'featured-app'
+    },
+    {
         id: 'dreamflow',
         title: 'zombiecheck',
         description: 'Find forgotten "zombie" subscriptions that silently drain your wallet. 100% Local & Private - no bank connection required. Compare your memory vs actual bills to spot hidden costs. Born from a real experience of paying for a closed shop\'s insurance for 1.5 years!',
