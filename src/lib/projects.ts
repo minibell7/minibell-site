@@ -262,7 +262,7 @@ export const projects: Project[] = [
     {
         id: 'flirting-vibe',
         title: 'Flirting Vibe',
-        description: 'Analyze your flirting style with this fun PWA.',
+        description: 'The Ultimate Vibe Check. Are you a Vibe Curator or just NPC Energy? Find out your dating archetype in 10 questions.',
         url: 'https://flirtingvibe.mini-bell.com',
         tags: ['PWA', 'Fun', 'Test'],
         featured: true,
