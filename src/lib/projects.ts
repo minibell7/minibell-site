@@ -299,6 +299,16 @@ export const projects: Project[] = [
         category: 'app',
         section: 'featured-app'
     },
+    {
+        id: 'zenith',
+        title: 'Zenith: Daily Brain Training',
+        description: 'Wake up your brain with a daily training ritual. Features 6 cognitive categories including Sudoku and mental math to ignite focus, memory, and logic.',
+        url: 'https://zenith.mini-bell.com',
+        tags: ['PWA', 'Game', 'Brain'],
+        featured: true,
+        category: 'app',
+        section: 'featured-app'
+    },
 
     // --- Content / Blogs ---
     {
