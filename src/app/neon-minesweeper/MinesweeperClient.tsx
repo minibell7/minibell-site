@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import styles from './page.module.css';
 import { createBoard, revealCell, toggleFlag, CellState, GameState, DIFFICULTIES, Difficulty } from '@/lib/minesweeper';
+import AdSense from '../../components/AdSense';
 
 export default function MinesweeperClient() {
     const [difficulty, setDifficulty] = useState<keyof typeof DIFFICULTIES>('EASY');
@@ -124,9 +125,24 @@ export default function MinesweeperClient() {
                 <div className={styles.victoryOverlay}>
                     <h2 className={styles.victoryTitle}>Mission Cleared!</h2>
                     <span className={styles.victoryEmoji}>💐</span>
+                    <div style={{ margin: '1rem 0' }}>
+                        <AdSense slot="3688754480" style={{ display: 'inline-block', width: '300px', height: '250px' }} format="rectangle" />
+                    </div>
                     <p style={{ color: '#fff', marginBottom: '1rem' }}>Time: {timer}s</p>
                     <button className={styles.restartBtn} onClick={() => initGame(difficulty)}>
                         Play Again
+                    </button>
+                </div>
+            )}
+            {gameState === 'lost' && (
+                <div className={styles.victoryOverlay} style={{ background: 'rgba(0,0,0,0.85)' }}>
+                    <h2 className={styles.victoryTitle} style={{ color: '#ff0055' }}>GAME OVER</h2>
+                    <span className={styles.victoryEmoji}>💥</span>
+                    <div style={{ margin: '1rem 0' }}>
+                        <AdSense slot="3688754480" style={{ display: 'inline-block', width: '300px', height: '250px' }} format="rectangle" />
+                    </div>
+                    <button className={styles.restartBtn} onClick={() => initGame(difficulty)}>
+                        Try Again
                     </button>
                 </div>
             )}

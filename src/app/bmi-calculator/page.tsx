@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import BMIClient from './BMIClient';
+import AdSense from '../../components/AdSense';
 import FAQSection from '../../components/FAQSection';
 
 export const metadata: Metadata = {
@@ -23,6 +24,8 @@ export default function BMICalculatorPage() {
             </p>
 
             <BMIClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>What is BMI?</h2>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import MegaMillionsClient from './MegaMillionsClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'US Mega Millions Generator | Random Number Picker',
@@ -22,6 +23,8 @@ export default function MegaMillionsPage() {
             </p>
 
             <MegaMillionsClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>How to Play Mega Millions</h2>

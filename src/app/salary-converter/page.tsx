@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import SalaryClient from './SalaryClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free Salary Converter | Hourly to Yearly Calculator',
@@ -22,6 +23,8 @@ export default function SalaryConverterPage() {
             </p>
 
             <SalaryClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Salary Converter?</h2>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import CounterClient from './CounterClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free Character Counter | Word & Letter Count Tool',
@@ -22,6 +23,8 @@ export default function CharacterCounterPage() {
             </p>
 
             <CounterClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Character Counter?</h2>

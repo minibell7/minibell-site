@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ProjectCard from '@/components/ProjectCard';
 import { getFeaturedProjects } from '@/lib/projects';
 import Link from 'next/link';
+import AdSense from '@/components/AdSense';
 
 // Simple Typing Animation Component
 const TypingText = ({ text }: { text: string }) => {
@@ -111,6 +112,8 @@ export default function Home() {
         </div>
       </section>
 
+      <AdSense slot="8862008350" style={{ maxWidth: '800px', margin: '2rem auto' }} />
+
       {/* Section 2: Daily Essentials */}
       <section className={styles.section} style={{ animationDelay: '0.4s' }}>
         <div className={styles.sectionHeader}>
@@ -165,6 +168,8 @@ export default function Home() {
         </div>
       </section>
 
+      <AdSense slot="8862008350" style={{ maxWidth: '800px', margin: '2rem auto' }} />
+
       {/* Section 5: Featured Apps (Personal Projects) */}
       <section className={styles.section} style={{ animationDelay: '1.0s' }}>
         <div className={styles.sectionHeader}>
@@ -177,6 +182,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </main>
+    </main >
   );
 }

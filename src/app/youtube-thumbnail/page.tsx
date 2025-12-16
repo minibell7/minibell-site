@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import ThumbnailClient from './ThumbnailClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free YouTube Thumbnail Downloader | Save HD Thumbnails',
@@ -22,6 +23,8 @@ export default function YoutubeThumbnailPage() {
             </p>
 
             <ThumbnailClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a YouTube Thumbnail Downloader?</h2>

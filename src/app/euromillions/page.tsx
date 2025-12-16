@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import EuroMillionsClient from './EuroMillionsClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'EuroMillions Generator | Random Number Picker',
@@ -22,6 +23,8 @@ export default function EuroMillionsPage() {
             </p>
 
             <EuroMillionsClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>What is EuroMillions?</h2>

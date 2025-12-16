@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import PercentageClient from './PercentageClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Percentage Calculator | Discount, Ratio, & Change',
@@ -22,6 +23,8 @@ export default function PercentagePage() {
             </p>
 
             <PercentageClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Percentage Calculator?</h2>

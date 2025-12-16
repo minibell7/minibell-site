@@ -13,6 +13,7 @@ import {
     Tetromino,
     Board
 } from '@/lib/neon-blocks';
+import AdSense from '../../components/AdSense';
 
 export default function BlocksClient() {
     const [board, setBoard] = useState<Board>(createBoard());
@@ -248,6 +249,9 @@ export default function BlocksClient() {
                 <div className={styles.gameOver}>
                     <h2 style={{ color: '#ff0055', fontSize: '2rem' }}>GAME OVER</h2>
                     <p style={{ color: '#fff', fontSize: '1.5rem' }}>Score: {score}</p>
+                    <div style={{ margin: '1rem 0' }}>
+                        <AdSense slot="3688754480" style={{ display: 'inline-block', width: '300px', height: '250px' }} format="rectangle" />
+                    </div>
                     <button className={styles.startBtn} onClick={startGame} style={{ marginTop: '1rem' }}>
                         Replay
                     </button>

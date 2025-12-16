@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import FaviconGeneratorClient from './FaviconGeneratorClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free Favicon Generator | Convert Images to PNG Icons',
@@ -22,6 +23,8 @@ export default function FaviconGeneratorPage() {
             </p>
 
             <FaviconGeneratorClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Favicon Generator?</h2>

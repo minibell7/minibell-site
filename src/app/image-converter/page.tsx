@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import ConverterClient from './ConverterClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free WebP Converter | Convert JPG/PNG to WebP',
@@ -22,6 +23,8 @@ export default function ImageConverterPage() {
             </p>
 
             <ConverterClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Convert Images to WebP?</h2>

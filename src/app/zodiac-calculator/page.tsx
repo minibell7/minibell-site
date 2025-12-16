@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import ZodiacClient from './ZodiacClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Zodiac Sign Calculator | Western & Chinese Zodiac',
@@ -22,6 +23,8 @@ export default function ZodiacCalculatorPage() {
             </p>
 
             <ZodiacClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Unlock the Secrets of the Stars</h2>

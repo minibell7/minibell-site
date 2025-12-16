@@ -1,4 +1,5 @@
 import MinesweeperClient from './MinesweeperClient';
+import AdSense from '../../components/AdSense';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,6 +13,8 @@ export default function MinesweeperPage() {
     return (
         <div className={styles.pageWrapper}>
             <MinesweeperClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>About Neon Minesweeper</h2>

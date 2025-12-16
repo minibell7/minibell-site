@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import LoanClient from './LoanClient';
+import AdSense from '../../components/AdSense';
 import FAQSection from '../../components/FAQSection';
 
 export const metadata: Metadata = {
@@ -23,6 +24,8 @@ export default function LoanCalculatorPage() {
             </p>
 
             <LoanClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Loan Calculator?</h2>

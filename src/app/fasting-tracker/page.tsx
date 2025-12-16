@@ -1,5 +1,6 @@
 import React from 'react';
 import FastingClient from './FastingClient';
+import AdSense from '../../components/AdSense';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,6 +12,8 @@ export default function FastingTrackerPage() {
     return (
         <main style={{ minHeight: '100vh', padding: '4rem 2rem' }}>
             <FastingClient />
+
+            <AdSense slot="3688754480" />
 
             <section style={{ maxWidth: '800px', margin: '4rem auto', color: 'var(--text-secondary)', lineHeight: '1.8' }}>
                 <h2 style={{ color: 'var(--text-primary)', fontSize: '2rem', marginBottom: '1.5rem' }}>

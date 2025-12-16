@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import FortuneClient from './FortuneClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Digital Fortune Cookie | Daily Wisdom & Luck',
@@ -22,6 +23,8 @@ export default function FortuneCookiePage() {
             </p>
 
             <FortuneClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>The Magic of the Fortune Cookie</h2>

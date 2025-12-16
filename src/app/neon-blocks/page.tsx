@@ -1,4 +1,5 @@
 import BlocksClient from './BlocksClient';
+import AdSense from '../../components/AdSense';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,6 +13,8 @@ export default function BlocksPage() {
     return (
         <div className={styles.pageWrapper}>
             <BlocksClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>About Neon Blocks</h2>

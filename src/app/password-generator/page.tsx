@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import PasswordClient from './PasswordClient';
+import AdSense from '../../components/AdSense';
 import FAQSection from '../../components/FAQSection';
 
 export const metadata: Metadata = {
@@ -23,6 +24,8 @@ export default function PasswordGeneratorPage() {
             </p>
 
             <PasswordClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why You Need a Strong Password</h2>

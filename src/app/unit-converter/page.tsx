@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import UnitClient from './UnitClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Unit Converter | Length, Weight, Area, Temperature',
@@ -22,6 +23,8 @@ export default function UnitConverterPage() {
             </p>
 
             <UnitClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Unit Converter?</h2>

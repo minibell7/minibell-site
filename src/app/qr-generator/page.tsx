@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import QRGeneratorClient from './QRGeneratorClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free QR Code Generator | Create Custom QR Codes Instantly',
@@ -22,6 +23,8 @@ export default function QRGeneratorPage() {
             </p>
 
             <QRGeneratorClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a QR Code Generator?</h2>

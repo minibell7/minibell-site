@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import TipClient from './TipClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free Tip Calculator | Calculate Gratuity & Split Bills',
@@ -22,6 +23,8 @@ export default function TipCalculatorPage() {
             </p>
 
             <TipClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Tip Calculator?</h2>

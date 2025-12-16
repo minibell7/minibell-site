@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import LoremClient from './LoremClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free Lorem Ipsum Generator | Dummy Text for Designers',
@@ -22,6 +23,8 @@ export default function LoremIpsumPage() {
             </p>
 
             <LoremClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>What is Lorem Ipsum?</h2>

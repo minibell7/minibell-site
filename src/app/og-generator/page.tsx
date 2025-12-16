@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import OGGeneratorClient from './OGGeneratorClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Free Open Graph Generator | Preview Social Media Cards',
@@ -22,6 +23,8 @@ export default function OGGeneratorPage() {
             </p>
 
             <OGGeneratorClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>What is Open Graph (OG)?</h2>

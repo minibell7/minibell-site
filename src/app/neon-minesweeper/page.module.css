@@ -186,7 +186,67 @@
         font-size: 1rem;
     }
 
+
     .title {
         font-size: 2rem;
     }
+}
+
+.victoryOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.victoryTitle {
+    font-size: 3rem;
+    color: #00ff9d;
+    text-shadow: 0 0 20px #00ff9d;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.victoryEmoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 1s infinite alternate;
+}
+
+.restartBtn {
+    background: var(--accent-primary);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px var(--accent-primary);
+    transition: all 0.3s ease;
+}
+
+.restartBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px var(--accent-primary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
 }

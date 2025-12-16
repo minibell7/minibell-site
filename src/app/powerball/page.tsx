@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import PowerballClient from './PowerballClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'US Powerball Generator | Random Number Picker',
@@ -22,6 +23,8 @@ export default function PowerballPage() {
             </p>
 
             <PowerballClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>How to Play US Powerball</h2>

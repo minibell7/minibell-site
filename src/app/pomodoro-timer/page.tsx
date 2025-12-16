@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 import PomodoroClient from './PomodoroClient';
+import AdSense from '../../components/AdSense';
 
 export const metadata: Metadata = {
     title: 'Pomodoro Timer | Focus & Study Timer',
@@ -22,6 +23,8 @@ export default function PomodoroPage() {
             </p>
 
             <PomodoroClient />
+
+            <AdSense slot="3688754480" />
 
             <section className={styles.seoSection}>
                 <h2>What is the Pomodoro Technique?</h2>
