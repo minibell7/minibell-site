@@ -67,7 +67,7 @@ export default function LoanCalculatorPage() {
                     answer: "A. APR stands for Annual Percentage Rate. It represents the yearly cost of the loan, including interest and fees, expressed as a percentage."
                 }
             ]} />
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

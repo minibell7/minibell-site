@@ -68,7 +68,7 @@ export default function BMICalculatorPage() {
                     answer: "A. The Metric system is used globally, while the Imperial system is primarily used in the United States. We provide both to ensure everyone can use our tool easily."
                 }
             ]} />
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

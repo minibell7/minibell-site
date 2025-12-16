@@ -57,7 +57,7 @@ export default function EuroMillionsPage() {
                     Lotteries are a form of entertainment. While dreaming of a big win is fun, the odds are long. This tool is for amusement purposes only and does not guarantee a win. Please gamble responsibly and set a budget for your play.
                 </p>
             </section>
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

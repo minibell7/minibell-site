@@ -21,16 +21,16 @@ export default function AdSense({ slot, style, format = 'auto', responsive = 'tr
   }, []);
 
   return (
-    <div style={{ margin: '2rem 0', textAlign: 'center', overflow: 'hidden' }}>
-        {label && <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>Advertisement</div>}
-        <ins
+    <div style={{ margin: '2rem 0', textAlign: 'center', overflow: 'hidden', width: '100%' }}>
+      {label && <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>Advertisement</div>}
+      <ins
         className="adsbygoogle"
         style={{ display: 'block', ...style }}
         data-ad-client="ca-pub-2875879574828967"
         data-ad-slot={slot}
         data-ad-format={format}
         data-ad-full-width-responsive={responsive}
-        />
+      />
     </div>
   );
 }

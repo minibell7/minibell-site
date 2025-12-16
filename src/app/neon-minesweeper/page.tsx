@@ -53,7 +53,7 @@ export default function MinesweeperPage() {
                     Minesweeper is an excellent exercise for logical reasoning and pattern recognition. It trains your brain to process information quickly and make decisions based on evidence. It's the perfect "brain break" during a busy day.
                 </p>
             </section>
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

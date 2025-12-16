@@ -53,7 +53,7 @@ export default function BlocksPage() {
                     Aside from being incredibly fun, block puzzle games are known to improve spatial awareness and cognitive function. It's a mental workout that feels like play. Plus, our version is completely free, runs in your browser, and requires no downloads.
                 </p>
             </section>
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

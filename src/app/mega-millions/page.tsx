@@ -61,7 +61,7 @@ export default function MegaMillionsPage() {
                     Please remember that lottery games are games of chance. This tool generates random numbers for entertainment and convenience. It does not predict winning numbers. Play responsibly and never spend more than you can afford to lose.
                 </p>
             </section>
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

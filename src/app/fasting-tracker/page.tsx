@@ -46,7 +46,7 @@ export default function FastingTrackerPage() {
                     <strong style={{ color: 'var(--accent-primary)' }}>Note:</strong> This timer saves your start time in your browser's local storage, so you can close the page and come back later without losing your progress.
                 </div>
             </section>
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </main>
     );
 }

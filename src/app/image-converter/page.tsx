@@ -67,7 +67,7 @@ export default function ImageConverterPage() {
                     </div>
                 </div>
             </section>
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

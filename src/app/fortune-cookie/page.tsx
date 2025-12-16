@@ -55,7 +55,7 @@ export default function FortuneCookiePage() {
                     <li><strong>Fun & Shareable:</strong> Share your fortune with friends or on social media to spread the good vibes.</li>
                 </ul>
             </section>
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }

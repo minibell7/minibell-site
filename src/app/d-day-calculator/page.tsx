@@ -73,7 +73,7 @@ export default function DDayPage() {
                     answer: "A. Set the start date of your diet or habit. The calculator will show you your current streak in days. Seeing the number grow can be a great motivator!"
                 }
             ]} />
-            <AdSense slot="3688754480" />
+            <AdSense slot="3688754480" style={{ maxWidth: '800px', margin: '2rem auto' }} />
         </div>
     );
 }
