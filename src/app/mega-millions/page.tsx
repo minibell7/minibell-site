@@ -24,7 +24,7 @@ export default function MegaMillionsPage() {
 
             <MegaMillionsClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>How to Play Mega Millions</h2>
@@ -61,6 +61,7 @@ export default function MegaMillionsPage() {
                     Please remember that lottery games are games of chance. This tool generates random numbers for entertainment and convenience. It does not predict winning numbers. Play responsibly and never spend more than you can afford to lose.
                 </p>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

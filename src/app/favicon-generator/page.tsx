@@ -24,7 +24,7 @@ export default function FaviconGeneratorPage() {
 
             <FaviconGeneratorClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Favicon Generator?</h2>
@@ -68,6 +68,7 @@ export default function FaviconGeneratorPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

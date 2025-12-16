@@ -24,7 +24,7 @@ export default function ZodiacCalculatorPage() {
 
             <ZodiacClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Unlock the Secrets of the Stars</h2>
@@ -62,6 +62,7 @@ export default function ZodiacCalculatorPage() {
                     <li><strong>Conversation Starter:</strong> Asking "What's your sign?" is a classic icebreaker that opens up fun and deep conversations.</li>
                 </ul>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

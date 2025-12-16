@@ -24,7 +24,7 @@ export default function LoremIpsumPage() {
 
             <LoremClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>What is Lorem Ipsum?</h2>
@@ -64,6 +64,7 @@ export default function LoremIpsumPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

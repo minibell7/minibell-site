@@ -25,7 +25,7 @@ export default function DDayPage() {
 
             <DDayClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a D-Day Calculator?</h2>
@@ -73,6 +73,7 @@ export default function DDayPage() {
                     answer: "A. Set the start date of your diet or habit. The calculator will show you your current streak in days. Seeing the number grow can be a great motivator!"
                 }
             ]} />
+            <AdSense slot="3688754480" />
         </div>
     );
 }

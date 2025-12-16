@@ -24,7 +24,7 @@ export default function OGGeneratorPage() {
 
             <OGGeneratorClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>What is Open Graph (OG)?</h2>
@@ -75,6 +75,7 @@ export default function OGGeneratorPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

@@ -24,7 +24,7 @@ export default function SalaryConverterPage() {
 
             <SalaryClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Salary Converter?</h2>
@@ -68,6 +68,7 @@ export default function SalaryConverterPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

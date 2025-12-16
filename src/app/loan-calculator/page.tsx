@@ -25,7 +25,7 @@ export default function LoanCalculatorPage() {
 
             <LoanClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Loan Calculator?</h2>
@@ -67,6 +67,7 @@ export default function LoanCalculatorPage() {
                     answer: "A. APR stands for Annual Percentage Rate. It represents the yearly cost of the loan, including interest and fees, expressed as a percentage."
                 }
             ]} />
+            <AdSense slot="3688754480" />
         </div>
     );
 }

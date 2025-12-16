@@ -24,7 +24,7 @@ export default function PowerballPage() {
 
             <PowerballClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>How to Play US Powerball</h2>
@@ -58,6 +58,7 @@ export default function PowerballPage() {
                     This tool is provided for entertainment purposes only. The numbers generated are random and do not guarantee a win. Lottery games are a form of gambling; please play responsibly and within your means. If you or someone you know has a gambling problem, please seek help.
                 </p>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

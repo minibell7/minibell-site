@@ -112,7 +112,7 @@ export default function Home() {
         </div>
       </section>
 
-      <AdSense slot="8862008350" style={{ maxWidth: '800px', margin: '2rem auto' }} />
+
 
       {/* Section 2: Daily Essentials */}
       <section className={styles.section} style={{ animationDelay: '0.4s' }}>
@@ -168,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      <AdSense slot="8862008350" style={{ maxWidth: '800px', margin: '2rem auto' }} />
+
 
       {/* Section 5: Featured Apps (Personal Projects) */}
       <section className={styles.section} style={{ animationDelay: '1.0s' }}>
@@ -182,6 +182,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <AdSense slot="8862008350" style={{ maxWidth: '800px', margin: '2rem auto' }} />
     </main >
   );
 }

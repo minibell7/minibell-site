@@ -25,7 +25,7 @@ export default function PasswordGeneratorPage() {
 
             <PasswordClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why You Need a Strong Password</h2>
@@ -67,6 +67,7 @@ export default function PasswordGeneratorPage() {
                     answer: "A. Adding symbols expands the set of possible characters, making \"brute force\" attacks (where hackers try every combination) take significantly longer."
                 }
             ]} />
+            <AdSense slot="3688754480" />
         </div>
     );
 }

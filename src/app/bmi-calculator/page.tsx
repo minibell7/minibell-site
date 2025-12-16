@@ -25,7 +25,7 @@ export default function BMICalculatorPage() {
 
             <BMIClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>What is BMI?</h2>
@@ -68,6 +68,7 @@ export default function BMICalculatorPage() {
                     answer: "A. The Metric system is used globally, while the Imperial system is primarily used in the United States. We provide both to ensure everyone can use our tool easily."
                 }
             ]} />
+            <AdSense slot="3688754480" />
         </div>
     );
 }

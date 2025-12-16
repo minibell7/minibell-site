@@ -24,7 +24,7 @@ export default function FortuneCookiePage() {
 
             <FortuneClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>The Magic of the Fortune Cookie</h2>
@@ -55,6 +55,7 @@ export default function FortuneCookiePage() {
                     <li><strong>Fun & Shareable:</strong> Share your fortune with friends or on social media to spread the good vibes.</li>
                 </ul>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

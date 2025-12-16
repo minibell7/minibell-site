@@ -24,7 +24,7 @@ export default function YoutubeThumbnailPage() {
 
             <ThumbnailClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a YouTube Thumbnail Downloader?</h2>
@@ -78,6 +78,7 @@ export default function YoutubeThumbnailPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

@@ -24,7 +24,7 @@ export default function PomodoroPage() {
 
             <PomodoroClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>What is the Pomodoro Technique?</h2>
@@ -67,6 +67,7 @@ export default function PomodoroPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

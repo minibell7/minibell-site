@@ -24,7 +24,7 @@ export default function ImageConverterPage() {
 
             <ConverterClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Convert Images to WebP?</h2>
@@ -67,6 +67,7 @@ export default function ImageConverterPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

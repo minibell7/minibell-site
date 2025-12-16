@@ -14,7 +14,7 @@ export default function MinesweeperPage() {
         <div className={styles.pageWrapper}>
             <MinesweeperClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>About Neon Minesweeper</h2>
@@ -53,6 +53,7 @@ export default function MinesweeperPage() {
                     Minesweeper is an excellent exercise for logical reasoning and pattern recognition. It trains your brain to process information quickly and make decisions based on evidence. It's the perfect "brain break" during a busy day.
                 </p>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

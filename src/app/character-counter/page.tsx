@@ -24,7 +24,7 @@ export default function CharacterCounterPage() {
 
             <CounterClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Character Counter?</h2>
@@ -70,6 +70,7 @@ export default function CharacterCounterPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

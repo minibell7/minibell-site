@@ -24,7 +24,7 @@ export default function QRGeneratorPage() {
 
             <QRGeneratorClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a QR Code Generator?</h2>
@@ -75,6 +75,7 @@ export default function QRGeneratorPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

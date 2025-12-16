@@ -24,7 +24,7 @@ export default function PercentagePage() {
 
             <PercentageClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Percentage Calculator?</h2>
@@ -78,6 +78,7 @@ export default function PercentagePage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }

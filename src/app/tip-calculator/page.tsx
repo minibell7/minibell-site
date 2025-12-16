@@ -24,7 +24,7 @@ export default function TipCalculatorPage() {
 
             <TipClient />
 
-            <AdSense slot="3688754480" />
+
 
             <section className={styles.seoSection}>
                 <h2>Why Use a Tip Calculator?</h2>
@@ -68,6 +68,7 @@ export default function TipCalculatorPage() {
                     </div>
                 </div>
             </section>
+            <AdSense slot="3688754480" />
         </div>
     );
 }
